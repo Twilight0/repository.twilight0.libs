@@ -20,14 +20,14 @@
 
 
 import re, json, urllib, urlparse
-import client, workers, control
+import client, workers, control, directory
 
 
 class youtube(object):
 
     def __init__(self, key=''):
 
-        self.list = [] ; self.data = []
+        self.list = [];  self.data = []
         self.base_link = 'http://www.youtube.com'
         self.key_link = '&key={0}'.format(control.setting('yt_api_key') or key)
         self.playlists_link = 'https://www.googleapis.com/youtube/v3/playlists?part=snippet&maxResults=50&channelId=%s'
@@ -94,6 +94,7 @@ class youtube(object):
         return self.list
 
     def video_list(self, cid, url, pagination):
+
         try:
             result = client.request(url)
             result = json.loads(result)
@@ -102,9 +103,12 @@ class youtube(object):
             pass
 
         for i in range(1, 5):
+
             try:
-                if pagination == True: raise Exception()
-                if not 'nextPageToken' in result: raise Exception()
+                if pagination is True:
+                    raise Exception()
+                if not 'nextPageToken' in result:
+                    raise Exception()
                 page = url + '&pageToken=' + result['nextPageToken']
                 result = client.request(page)
                 result = json.loads(result)
@@ -113,7 +117,8 @@ class youtube(object):
                 pass
 
         try:
-            if pagination == False: raise Exception()
+            if pagination is False:
+                raise Exception()
             next = cid + '&pageToken=' + result['nextPageToken']
         except:
             next = ''
@@ -132,7 +137,8 @@ class youtube(object):
                 image = image.encode('utf-8')
 
                 append = {'title': title, 'url': url, 'image': image}
-                if not next == '': append['next'] = next
+                if not next == '':
+                    append['next'] = next
                 self.list.append(append)
             except:
                 pass
@@ -192,9 +198,10 @@ class youtube(object):
         except:
             return
 
-    def play(self, name, url=None):
+    def play(self, name, url=None, as_script=True):
 
         try:
+
             url = self.worker(name, url)
             if url is None:
                 return
@@ -205,18 +212,27 @@ class youtube(object):
             icon = control.infoLabel('listitem.icon')
 
             item = control.item(path=url, iconImage=icon, thumbnailImage=icon)
+
             try:
                 item.setArt({'icon': icon})
             except:
                 pass
+
             item.setInfo(type='Video', infoLabels={'title': title})
-            control.player.play(url, item)
+
+            if as_script:
+                control.player.play(url, item)
+            else:
+                directory.resolve(url, meta={'title': title}, icon=icon)
+
         except:
+
             pass
 
     def worker(self, name, url):
 
         try:
+
             if url.startswith(self.base_link):
                 url = self.resolve(url)
                 if url is None:
@@ -225,17 +241,21 @@ class youtube(object):
             elif not url.startswith('http://'):
                 url = self.youtube_watch % url
                 url = self.resolve(url)
-                if url == None:
+                if url is None:
                     raise Exception()
                 return url
             else:
                 raise Exception()
+
         except:
+
             query = name + ' trailer'
             query = self.youtube_search + query
             url = self.search(query)
+
             if url is None:
                 return
+
             return url
 
     def search(self, url):
@@ -258,7 +278,9 @@ class youtube(object):
             return
 
     def resolve(self, url):
+
         try:
+
             id = url.split('?v=')[-1].split('/')[-1].split('?')[0].split('&')[0]
             result = client.request('http://www.youtube.com/watch?v=%s' % id)
 
@@ -273,6 +295,9 @@ class youtube(object):
                 raise Exception()
 
             url = 'plugin://plugin.video.youtube/play/?video_id=%s' % id
+
             return url
+
         except:
+
             return

@@ -18,12 +18,9 @@
         along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-import sys, urlparse
+from sys import argv
+from urlparse import parse_qsl
 
-syshandle = int(sys.argv[1])
-sysaddon = sys.argv[0]
-params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
-
-action = params.get('action')
-url = params.get('url')
-title = params.get('title')
+syshandle = int(argv[1])
+sysaddon = argv[0]
+params = dict(parse_qsl(argv[2].replace('?','')))

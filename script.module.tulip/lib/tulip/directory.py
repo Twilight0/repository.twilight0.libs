@@ -18,7 +18,6 @@
         along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-
 import urllib
 import control
 from init import sysaddon, syshandle
@@ -34,7 +33,9 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
     sysfanart = control.addonInfo('fanart')
 
     for i in items:
+
         try:
+
             try:
                 label = control.lang(i['title']).encode('utf-8')
             except:
@@ -77,6 +78,18 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
                 url += '&title=%s' % urllib.quote_plus(i['title'])
             except:
                 pass
+            try:
+                url += '&name=%s' % urllib.quote_plus(i['name'].encode('utf-8'))
+            except:
+                pass
+            try:
+                url += '&plot=%s' % urllib.quote_plus(i['plot'].encode('utf-8'))
+            except:
+                pass
+            try:
+                url += '&genre=%s' % urllib.quote_plus(i['genre'])
+            except:
+                pass
 
             cm = []
             menus = i['cm'] if 'cm' in i else []
@@ -115,7 +128,9 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
                     item.addStreamInfo('video', {'codec': 'h264'})
 
             control.addItem(handle=syshandle, url=url, listitem=item, isFolder=isFolder)
+
         except:
+
             pass
 
     try:
@@ -138,7 +153,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
     except:
         pass
 
-    if not content is None:
+    if content is not None:
         control.content(syshandle, content)
 
     control.directory(syshandle, cacheToDisc=cacheToDisc)

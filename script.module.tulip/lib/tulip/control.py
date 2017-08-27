@@ -19,7 +19,8 @@
 '''
 
 
-import os, xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
+import sys, os, xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
+from init import syshandle
 
 
 integer = 1000
@@ -35,6 +36,7 @@ directory = xbmcplugin.endOfDirectory
 content = xbmcplugin.setContent
 property = xbmcplugin.setProperty
 resolve = xbmcplugin.setResolvedUrl
+sortmethod = xbmcplugin.addSortMethod
 
 infoLabel = xbmc.getInfoLabel
 condVisibility = xbmc.getCondVisibility
@@ -161,3 +163,109 @@ def addonmedia(icon, addonid=addonInfo('id'), theme=None):
         return join(addon(addonid).getAddonInfo('path'), 'resources', 'media', icon)
     else:
         return join(addon(addonid).getAddonInfo('path'), 'resources', 'media', theme, icon)
+
+
+def sortmethods(method, mask='%D'):
+
+    """
+    Function to sort directory items
+
+    :param method: acceptable values are: TODO
+    :param mask: acceptable values are: TODO
+    :type method: str
+    :type mask: str
+    :return: call existing function and pass parameters
+    :rtype: xbmcplugin.addSortMethod(handle=syshandle, sortMethod=int)
+    :note: Method to sort directory items
+    """
+
+    #  "%A" "%B" "%C" "%D" ...
+
+    if method == 'none':
+        return sortmethod(handle=syshandle, sortMethod=0, label2Mask=mask)
+    elif method == 'label':
+        return sortmethod(handle=syshandle, sortMethod=1, label2Mask=mask)
+    elif method == 'label_ignore_the':
+        return sortmethod(handle=syshandle, sortMethod=2, label2Mask=mask)
+    elif method == 'date':
+        return sortmethod(handle=syshandle, sortMethod=3)
+    elif method == 'size':
+        return sortmethod(handle=syshandle, sortMethod=4)
+    elif method == 'file':
+        return sortmethod(handle=syshandle, sortMethod=5, label2Mask=mask)
+    elif method == 'drive_type':
+        return sortmethod(handle=syshandle, sortMethod=6)
+    elif method == 'tracknum':
+        return sortmethod(handle=syshandle, sortMethod=7, label2Mask=mask)
+    elif method == 'duration':
+        return sortmethod(handle=syshandle, sortMethod=8)
+    elif method == 'title':
+        return sortmethod(handle=syshandle, sortMethod=9, label2Mask=mask)
+    elif method == 'title_ignore_the':
+        return sortmethod(handle=syshandle, sortMethod=10, label2Mask=mask)
+    elif method == 'artist':
+        return sortmethod(handle=syshandle, sortMethod=11)
+    elif method == 'artist_ignore_the':
+        return sortmethod(handle=syshandle, sortMethod=12)
+    elif method == 'album':
+        return sortmethod(handle=syshandle, sortMethod=13)
+    elif method == 'album_ignore_the':
+        return sortmethod(handle=syshandle, sortMethod=14)
+    elif method == 'genre':
+        return sortmethod(handle=syshandle, sortMethod=15)
+    elif method == 'year':
+        return sortmethod(handle=syshandle, sortMethod=16)
+    elif method == 'video_rating':
+        return sortmethod(handle=syshandle, sortMethod=17)
+    elif method == 'program_count':
+        return sortmethod(handle=syshandle, sortMethod=18)
+    elif method == 'playlist_order':
+        return sortmethod(handle=syshandle, sortMethod=19)
+    elif method == 'episode':
+        return sortmethod(handle=syshandle, sortMethod=20)
+    elif method == 'video_title':
+        return sortmethod(handle=syshandle, sortMethod=21, label2Mask=mask)
+    elif method == 'video_sort_title':
+        return sortmethod(handle=syshandle, sortMethod=22, label2Mask=mask)
+    elif method == 'video_sort_title_ignore_the':
+        return sortmethod(handle=syshandle, sortMethod=23, label2Mask=mask)
+    elif method == 'production_code':
+        return sortmethod(handle=syshandle, sortMethod=24)
+    elif method == 'song_rating':
+        return sortmethod(handle=syshandle, sortMethod=25)
+    elif method == 'mpaa_rating':
+        return sortmethod(handle=syshandle, sortMethod=26)
+    elif method == 'video_runtime':
+        return sortmethod(handle=syshandle, sortMethod=27)
+    elif method == 'studio':
+        return sortmethod(handle=syshandle, sortMethod=28)
+    elif method == 'studio_ignore_the':
+        return sortmethod(handle=syshandle, sortMethod=29)
+    elif method == 'unsorted':
+        return sortmethod(handle=syshandle, sortMethod=30, label2Mask=mask)
+    elif method == 'bitrate':
+        return sortmethod(handle=syshandle, sortMethod=31)
+    elif method == 'listeners':
+        return sortmethod(handle=syshandle, sortMethod=32)
+    elif method == 'country':
+        return sortmethod(handle=syshandle, sortMethod=33)
+    elif method == 'date_added':
+        return sortmethod(handle=syshandle, sortMethod=34)
+    elif method == 'full_path':
+        return sortmethod(handle=syshandle, sortMethod=35, label2Mask=mask)
+    elif method == 'label_ignore_folders':
+        return sortmethod(handle=syshandle, sortMethod=36, label2Mask=mask)
+    elif method == 'last_played':
+        return sortmethod(handle=syshandle, sortMethod=37)
+    elif method == 'play_count':
+        return sortmethod(handle=syshandle, sortMethod=38)
+    elif method == 'channel':
+        return sortmethod(handle=syshandle, sortMethod=39, label2Mask=mask)
+    elif method == 'date_taken':
+        return sortmethod(handle=syshandle, sortMethod=40)
+    elif method == 'video_user_rating':
+        return sortmethod(handle=syshandle, sortMethod=41)
+    elif method == 'song_user_rating':
+        return sortmethod(handle=syshandle, sortMethod=42)
+    else:
+        pass
