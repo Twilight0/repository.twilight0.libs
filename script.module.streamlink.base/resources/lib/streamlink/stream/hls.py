@@ -273,6 +273,7 @@ class HLSStream(HTTPStream):
                                name_prefix="", check_streams=False,
                                force_restart=False, name_fmt=None,
                                **request_params):
+
         """Attempts to parse a variant playlist and return its streams.
 
         :param url: The URL of the variant playlist.
@@ -284,8 +285,14 @@ class HLSStream(HTTPStream):
         :param name_fmt: A format string for the name, allowed format keys are
                          name, pixels, bitrate.
         """
+
         logger = session_.logger.new_module("hls.parse_variant_playlist")
-        locale = session_.localization
+
+        try:
+            locale = session_.localization
+        except:
+            locale = 'en_US'
+
         # Backwards compatibility with "namekey" and "nameprefix" params.
         name_key = request_params.pop("namekey", name_key)
         name_prefix = request_params.pop("nameprefix", name_prefix)

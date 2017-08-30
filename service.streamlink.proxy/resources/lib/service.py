@@ -1,27 +1,28 @@
 """
-Modified for Streamlink
-https://github.com/neverreply/service.streamlink.proxy
----
-
-XBMCLocalProxy 0.1
-Copyright 2011 Torben Gerkensmeyer
-
-Modified for Livestreamer by your mom 2k15
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-MA 02110-1301, USA.
+    ---
+    Modified for Streamlink
+    https://github.com/neverreply/service.streamlink.proxy
+    ---
+    
+    XBMCLocalProxy 0.1
+    Copyright 2011 Torben Gerkensmeyer
+    
+    Modified for Livestreamer by your mom 2k15
+    
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+    
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+    MA 02110-1301, USA.
 """
 
 import os
@@ -44,33 +45,52 @@ import xbmcaddon
 __settings__ = xbmcaddon.Addon(id='service.streamlink.proxy')
 __language__ = __settings__.getLocalizedString
 
-_path_streamlink_plugins_ = os.path.join('service.streamlink.plugins', 'plugins')
+try:
+    _path_streamlink_plugins_ = os.path.join('service.streamlink.plugins', 'plugins')
+except:
+    pass
+
 _path_streamlink_service_ = os.path.join('service.streamlink.proxy', 'resources', 'lib')
 
 _path_kodi_folder_ = os.path.dirname(os.path.realpath(__file__))
-_neverreply_plugins_ = _path_kodi_folder_.replace(_path_streamlink_service_, _path_streamlink_plugins_)
+
+try:
+    _custom_plugins_ = _path_kodi_folder_.replace(_path_streamlink_service_, _path_streamlink_plugins_)
+except:
+    pass
 
 plugin = Plugin()
 
+HOST = '127.0.0.1'
+PORT = plugin.get_setting('listen_port')
+
 
 class MyHandler(BaseHTTPRequestHandler):
-    """
-    Serves a HEAD request
-    """
+
     def do_HEAD(self):
+
+        """
+        Serves a HEAD request
+        """
+
         plugin.log_debug('Serving HEAD request...')
         self.answer_request(0)
 
-    """
-    Serves a GET request.
-    """
     def do_GET(self):
+
+        """
+        Serves a GET request.
+        """
+
         plugin.log_debug('Serving GET request...')
         self.answer_request(1)
 
     def answer_request(self, sendData):
+
         try:
+
             p = urlparse.urlparse(self.path)
+
             try:
                 params = dict(urlparse.parse_qsl(p.query))
             except:
@@ -89,16 +109,20 @@ class MyHandler(BaseHTTPRequestHandler):
                 self.redirectURL(params, sendData)
             else:
                 self.send_response(403)
+
         except:
-                traceback.print_exc()
-                self.wfile.close()
-                return
+
+            traceback.print_exc()
+            self.wfile.close()
+            return
+
         try:
             self.wfile.close()
         except:
             pass
 
     def redirectURL(self, params, sendData):
+
         if (sendData):
             url = params.get('url')
 
@@ -110,7 +134,10 @@ class MyHandler(BaseHTTPRequestHandler):
 
             session = Streamlink()
             # custom streamlink plugins
-            session.load_plugins(_neverreply_plugins_)
+            try:
+                session.load_plugins(_custom_plugins_)
+            except:
+                pass
 
             # <!-- ZATTOO
             if url.startswith(('https://zattoo.com', 'https://tvonline.ewe.de', 'https://nettv.netcologne.de')):
@@ -134,6 +161,7 @@ class MyHandler(BaseHTTPRequestHandler):
             plugin.log_debug('Sending data...')
 
             try:
+
                 stream = streams.get(quality)
 
                 if not stream:
@@ -144,16 +172,20 @@ class MyHandler(BaseHTTPRequestHandler):
                 self.send_header('Location', stream.url)
                 self.end_headers()
                 return
+
             except:
                 traceback.print_exc()
                 self.wfile.close()
                 return
 
-    """
-    Sends the requested file and add additional headers.
-    """
     def serveFile(self, params, sendData):
-        if (sendData):
+
+        """
+        Sends the requested file and add additional headers.
+        """
+
+        if sendData:
+
             url = params.get('url')
 
             if not url:
@@ -164,7 +196,7 @@ class MyHandler(BaseHTTPRequestHandler):
 
             session = Streamlink()
             # custom streamlink plugins
-            session.load_plugins(_neverreply_plugins_)
+            session.load_plugins(_custom_plugins_)
 
             # <!-- ZATTOO
             if url.startswith(('https://zattoo.com', 'https://tvonline.ewe.de', 'https://nettv.netcologne.de')):
@@ -184,13 +216,15 @@ class MyHandler(BaseHTTPRequestHandler):
             except Exception:
                 traceback.print_exc(file=sys.stdout)
                 self.send_response(403)
+
             self.send_response(200)
             plugin.log_debug('Sending headers...')
             self.end_headers()
 
             plugin.log_debug('Sending data...')
-            fileout = None
+
             fileout = self.wfile
+
             try:
                 stream = streams.get(quality)
 
@@ -198,18 +232,18 @@ class MyHandler(BaseHTTPRequestHandler):
                     self.send_error(404, 'Stream Not Found')
                     return
 
-                """fileout = None
-                try:
-                    fileout = stream.open()
-                    shutil.copyfileobj(fileout, self.wfile)
-                finally:
-                    if fileout:
-                        fileout.close()
-                """
+                # fileout = None
+                # try:
+                #     fileout = stream.open()
+                #     shutil.copyfileobj(fileout, self.wfile)
+                # finally:
+                #     if fileout:
+                #         fileout.close()
+
                 try:
                     response = stream.open()
                     buf = 'INIT'
-                    while (buf is not None and len(buf) > 0):
+                    while buf is not None and len(buf) > 0:
                         buf = response.read(5000 * 1024)
                         fileout.write(buf)
                         fileout.flush()
@@ -242,10 +276,13 @@ class MyHandler(BaseHTTPRequestHandler):
 
 
 class Server(HTTPServer):
+
     """HTTPServer class with timeout."""
 
     def get_request(self):
+
         """Get the request and client address from the socket."""
+
         self.socket.settimeout(5.0)
         result = None
         while result is None:
@@ -261,10 +298,8 @@ class ThreadedHTTPServer(ThreadingMixIn, Server):
     """Handle requests in a separate thread."""
     allow_reuse_address = True
 
-HOST = '127.0.0.1'
-PORT = plugin.get_setting('listen_port', int)
-
 if __name__ == '__main__':
+
     sys.stderr = sys.stdout
     server_class = ThreadedHTTPServer
     httpd = server_class((HOST, PORT), MyHandler)
@@ -276,5 +311,5 @@ if __name__ == '__main__':
         if monitor.waitForAbort(1):
             break
 
-httpd.server_close()
-plugin.log_notice('Server Stops - {0} on port {1}'.format(HOST, PORT))
+    httpd.server_close()
+    plugin.log_notice('Server Stops - {0} on port {1}'.format(HOST, PORT))

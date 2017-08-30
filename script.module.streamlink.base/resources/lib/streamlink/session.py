@@ -6,7 +6,7 @@ import sys
 import traceback
 
 import requests
-from streamlink.utils.l10n import Localization
+
 
 from . import plugins, __version__
 from .compat import urlparse, is_win32
@@ -468,10 +468,5 @@ class Streamlink(object):
     @property
     def version(self):
         return __version__
-
-    @property
-    def localization(self):
-        return Localization(self.get_option("locale"))
-
 
 __all__ = ["Streamlink"]

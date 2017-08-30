@@ -111,8 +111,12 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
 
             item = control.item(label=label, iconImage=image, thumbnailImage=image)
 
-            item.setArt({'icon': image, 'thumb': image, 'poster': image, 'tvshow.poster': image, 'season.poster': image,
-                         'banner': banner, 'tvshow.banner': banner, 'season.banner': banner})
+            item.setArt(
+                {
+                    'icon': image, 'thumb': image, 'poster': image, 'tvshow.poster': image, 'season.poster': image,
+                    'banner': banner, 'tvshow.banner': banner, 'season.banner': banner
+                }
+            )
 
             item.setProperty('Fanart_Image', fanart)
 
@@ -134,6 +138,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
             pass
 
     try:
+
         i = items[0]
         if i['next'] == '':
             raise Exception()
@@ -141,13 +146,21 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
         url = '%s?action=%s&url=%s' % (sysaddon, i['nextaction'], urllib.quote_plus(i['next']))
         icon = i['nexticon'] if 'nexticon' in i else control.addonmedia('next.png')
         fanart = i['nextfanart'] if 'nextfanart' in i else sysfanart
+
         try:
             label = control.lang(i['nextlabel']).encode('utf-8')
         except:
             label = 'next'
 
         item = control.item(label=label, iconImage=icon, thumbnailImage=icon)
-        item.setArt({'icon': icon, 'thumb': icon, 'poster': icon, 'tvshow.poster': icon, 'season.poster': icon, 'banner': icon, 'tvshow.banner': icon, 'season.banner': icon})
+
+        item.setArt(
+            {
+                'icon': icon, 'thumb': icon, 'poster': icon, 'tvshow.poster': icon, 'season.poster': icon,
+                'banner': icon, 'tvshow.banner': icon, 'season.banner': icon
+            }
+        )
+
         item.setProperty('Fanart_Image', fanart)
         control.addItem(handle=syshandle, url=url, listitem=item, isFolder=True)
     except:

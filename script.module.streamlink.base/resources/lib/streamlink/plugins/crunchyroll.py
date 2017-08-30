@@ -287,7 +287,7 @@ class Crunchyroll(Plugin):
         current_time = datetime.datetime.utcnow()
         device_id = self._get_device_id()
         # use the crunchyroll locale as an override, for backwards compatibility
-        locale = self.get_option("locale") or self.session.localization.language_code
+        locale = self.get_option("locale")
         api = CrunchyrollAPI(
             self.options.get("session_id") or self.cache.get("session_id"), self.cache.get("auth"), locale
         )

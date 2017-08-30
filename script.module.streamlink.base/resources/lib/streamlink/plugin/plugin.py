@@ -1,6 +1,10 @@
 import operator
 import re
-from collections import OrderedDict
+
+try:
+    from collections import OrderedDict
+except ImportError:
+    from ..packages.flashmedia.ordereddict import OrderedDict
 
 from functools import partial
 
