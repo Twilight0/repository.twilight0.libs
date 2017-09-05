@@ -19,7 +19,8 @@
 '''
 
 
-import sys, os, xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
+import os, xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
+
 from init import syshandle
 
 

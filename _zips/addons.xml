@@ -31,7 +31,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2017.08.30" provider-name="Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2017.09.05" provider-name="Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.12.4"/>
@@ -39,7 +39,7 @@
     <import addon="script.module.futures" version="2.2.0"/>
     <import addon="script.module.singledispatch" version="3.4.0.3"/>
     <import addon="script.module.streamlink.crypto" version="1.1.0"/>
-    <import addon="service.streamlink.plugins" version="1.0.0" optional="true"/>
+    <import addon="script.module.streamlink.plugins" version="1.0.2" optional="true"/>
   </requires>
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
@@ -53,6 +53,11 @@
       <icon>resources/icon.png</icon>
     </assets>
     <news>
++ 2017.09.05
+- Added dependency for streamlink plugins
+- Updated to commit/f26733cfc83156db32f9721cca71ebf3b86e0dbd
+- Added websocket module in utils directory
+
 + 2017.08.30
 - Removed dependency for pycountry &amp; ordereddict
 
@@ -86,6 +91,22 @@
     <source>https://github.com/beardypig/script.module.streamlink.crypto</source>
     <platform>all</platform>
     <license>MIT</license>
+  </extension>
+</addon>
+
+<addon id="script.module.streamlink.plugins" name="Streamlink Plugins" version="1.0.2" provider-name="Twilight0">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.service"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>Streamlink Plugins</summary>
+    <description>Copy your custom streamlink plugins in this Kodi plugin.</description>
+    <platform>all</platform>
+    <!--<license></license>-->
+    <!--<source></source>-->
+    <!--<website></website>-->
+    <!--<language></language>-->
   </extension>
 </addon>
 
@@ -149,28 +170,12 @@
   </extension>
 </addon>
 
-<addon id="service.streamlink.plugins" name="Streamlink Plugins" version="1.0.1" provider-name="Twilight0">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.service"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>Streamlink Plugins</summary>
-    <description>Copy your custom streamlink plugins in this Kodi plugin.</description>
-    <platform>all</platform>
-    <license></license>
-    <source></source>
-    <website></website>
-    <language></language>
-  </extension>
-</addon>
-
-<addon id="service.streamlink.proxy" name="Streamlink Proxy" version="3.0.7" provider-name="Twilight0">
+<addon id="service.streamlink.proxy" name="Streamlink Proxy" version="4.0.0" provider-name="Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.streamlink.base" version="2017.07.19"/>
   </requires>
-  <extension point="xbmc.service" library="resources/lib/service.py" start="[login|startup]" />
+  <extension point="xbmc.service" library="resources/lib/service.py" start="login" />
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <language>en de el</language>
@@ -183,6 +188,10 @@
       <icon>resources/icon.png</icon>
     </assets>
     <news>
++ 4.0.0
+- Rebased service.py from beardypig's script
+  > https://github.com/beardypig/plugin.video.streamlink/blob/master/service.py
+
 + 3.0.7
 - Fixed issue which caused Kodi to hang up when closing
 - Default port is set to 50165

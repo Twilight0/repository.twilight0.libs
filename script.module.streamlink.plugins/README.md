@@ -8,6 +8,6 @@ Just copy your `....py` file into the _plugins_ folder.
 
 ## streamlink
 
-The compatible streamlink Kodi plugin for this is [neverreply/service.streamlink.proxy](https://github.com/neverreply/service.streamlink.proxy)
+The compatible streamlink Kodi plugin for this is [Twilight0/service.streamlink.proxy(https://github.com/Twilight0/service.streamlink.proxy)
 
-You can find it in [repository.neverreply](https://github.com/neverreply/repo)
+You can find it in [repository.twilight0.libs](https://github.com/Twilight0/repo.twilight0.libs)
