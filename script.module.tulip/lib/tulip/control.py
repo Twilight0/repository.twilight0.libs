@@ -50,6 +50,7 @@ player = xbmc.Player()
 playlist = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
 monitor = xbmc.Monitor()
 wait = monitor.waitForAbort
+aborted = monitor.abortRequested()
 
 transPath = xbmc.translatePath
 skinPath = xbmc.translatePath('special://skin/')

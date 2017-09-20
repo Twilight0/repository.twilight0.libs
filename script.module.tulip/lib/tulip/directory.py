@@ -106,6 +106,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
                     pass
 
             meta = dict((k, v) for k, v in i.iteritems() if not k == 'cm' and not v == '0')
+
             if mediatype is not None:
                 meta['mediatype'] = mediatype
 
