@@ -30,7 +30,8 @@ except ImportError:
     requester = None
 
 
-def request(url, close=True, redirect=True, error=False, proxy=None, post=None, headers=None, mobile=False, limit=None, referer=None, cookie=None, output='', timeout='30'):
+def request(url, close=True, redirect=True, error=False, proxy=None, post=None, headers=None, mobile=False, limit=None,
+            referer=None, cookie=None, output='', timeout='30'):
 
     try:
         handlers = []
@@ -135,6 +136,7 @@ def request(url, close=True, redirect=True, error=False, proxy=None, post=None, 
                 return
 
         if output == 'cookie':
+
             try:
                 result = '; '.join(['%s=%s' % (i.name, i.value) for i in cookies])
             except:
@@ -145,6 +147,7 @@ def request(url, close=True, redirect=True, error=False, proxy=None, post=None, 
                 pass
 
         elif output == 'response':
+
             if limit == '0':
                 result = (str(response.code), response.read(224 * 1024))
             elif limit is not None:
@@ -164,6 +167,7 @@ def request(url, close=True, redirect=True, error=False, proxy=None, post=None, 
             result = response.read(16 * 1024)
 
         elif output == 'extended':
+
             try:
                 cookie = '; '.join(['%s=%s' % (i.name, i.value) for i in cookies])
             except:

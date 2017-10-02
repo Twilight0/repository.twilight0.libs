@@ -1,3 +1,7 @@
+[B]1.2.7[/B]
+- Added utf-8 encoding for title parameter in directory module
+- Cosmetics
+
 [B]1.2.6[/B]
 - Changes to sort methods from plain integers to module variables
 

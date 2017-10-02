@@ -75,7 +75,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
             except:
                 pass
             try:
-                url += '&title=%s' % urllib.quote_plus(i['title'])
+                url += '&title=%s' % urllib.quote_plus(i['title'].encode('utf-8'))
             except:
                 pass
             try:

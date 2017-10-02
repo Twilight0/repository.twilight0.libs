@@ -109,6 +109,7 @@ def __get_attribs(element):
 
 
 def parse_dom(html, name='', attrs=None, req=False, exclude_comments=False):
+
     if attrs is None:
         attrs = {}
     name = name.strip()
@@ -143,6 +144,7 @@ def parse_dom(html, name='', attrs=None, req=False, exclude_comments=False):
         req = set([key.lower() for key in req])
 
     all_results = []
+
     for item in html:
         if isinstance(item, DomMatch):
             item = item.content
