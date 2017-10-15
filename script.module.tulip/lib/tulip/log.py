@@ -50,14 +50,14 @@ def log_error(msg):
 
 def log(msg, level=LOGDEBUG):
     # override message level to force logging when addon logging turned on
-    if control.setting('dev_switch') == 'true' and level == LOGDEBUG:
+    if control.setting('debug') == 'true' and level == LOGDEBUG:
         level = LOGNOTICE
 
     try:
         if isinstance(msg, unicode):
             msg = '%s (ENCODED)' % (msg.encode('utf-8'))
 
-        xbmc.log('%s: %s' % (control.addonInfo('name'), msg), level)
+        xbmc.log('{0}, {1}:: {2}'.format(control.addonInfo('name'), control.addonInfo('version'), msg), level)
     except Exception as e:
         try:
             xbmc.log('Logging Failure: %s' % (e), level)
