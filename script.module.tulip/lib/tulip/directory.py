@@ -173,7 +173,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
     control.directory(syshandle, cacheToDisc=cacheToDisc)
 
 
-def resolve(url, meta=None, icon=None):
+def resolve(url, meta=None, icon=None, dash=False):
 
     item = control.item(path=url)
 
@@ -182,5 +182,16 @@ def resolve(url, meta=None, icon=None):
 
     if not meta is None:
         item.setInfo(type='Video', infoLabels=meta)
+
+    if dash:
+        item.setContentLookup(False)
+        item.setMimeType('application/xml+dash')
+        item.setProperty('inputstreamaddon', 'inputstream.adaptive')
+        item.setProperty('inputstream.adaptive.manifest_type', 'mpd')
+        isa_version = int(control.infoLabel('System.AddonVersion(inputstream.adaptive)').replace('.', ''))
+        if isa_version >= 2018:
+            item.setProperty('inputstream.adaptive.manifest_update_parameter', '&start_seq=$START_NUMBER$')
+    else:
+        pass
 
     control.resolve(syshandle, True, item)
