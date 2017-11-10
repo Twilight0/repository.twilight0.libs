@@ -167,7 +167,7 @@ def addonmedia(icon, addonid=addonInfo('id'), theme=None):
         return join(addon(addonid).getAddonInfo('path'), 'resources', 'media', theme, icon)
 
 
-def sortmethods(method, mask='%D'):
+def sortmethods(method='unsorted', mask='%D'):
 
     """
     Function to sort directory items

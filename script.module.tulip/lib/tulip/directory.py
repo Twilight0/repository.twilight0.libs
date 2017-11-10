@@ -173,7 +173,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
     control.directory(syshandle, cacheToDisc=cacheToDisc)
 
 
-def resolve(url, meta=None, icon=None, dash=False):
+def resolve(url, meta=None, icon=None, dash=False, live=False):
 
     item = control.item(path=url)
 
@@ -189,7 +189,7 @@ def resolve(url, meta=None, icon=None, dash=False):
         item.setProperty('inputstreamaddon', 'inputstream.adaptive')
         item.setProperty('inputstream.adaptive.manifest_type', 'mpd')
         isa_version = int(control.infoLabel('System.AddonVersion(inputstream.adaptive)').replace('.', ''))
-        if isa_version >= 2018:
+        if isa_version >= 2018 and live:
             item.setProperty('inputstream.adaptive.manifest_update_parameter', '&start_seq=$START_NUMBER$')
     else:
         pass

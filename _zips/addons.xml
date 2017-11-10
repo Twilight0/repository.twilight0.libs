@@ -100,7 +100,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="1.2.9" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="1.2.10" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 		<import addon="script.module.requests" optional="true"/>
