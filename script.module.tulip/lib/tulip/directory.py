@@ -187,7 +187,7 @@ def resolve(url, meta=None, icon=None, dash=False):
     if not meta is None:
         item.setInfo(type='Video', infoLabels=meta)
 
-    xbmc_python_ver = int(control.addon_details('xmbc.python', ["version"]).get('version').replace('.', ''))
+    xbmc_python_ver = int(control.infoLabel('System.AddonVersion(xbmc.python)').replace('.', ''))
     ias_enabled = control.addon_details('inputstream.adaptive').get('enabled')
 
     if dash and xbmc_python_ver > 224 and ias_enabled:
