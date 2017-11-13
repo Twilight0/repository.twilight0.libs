@@ -22,9 +22,7 @@
 import hashlib, json
 
 try:
-
     from sqlite3 import dbapi2 as database
-
 except ImportError:
     # noinspection PyUnresolvedReferences
     from pysqlite2 import dbapi2 as database

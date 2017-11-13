@@ -90,6 +90,10 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
                 url += '&genre=%s' % urllib.quote_plus(i['genre'])
             except:
                 pass
+            try:
+                url += '&dash=%s' % urllib.quote_plus(i['dash'])
+            except:
+                pass
 
             cm = []
             menus = i['cm'] if 'cm' in i else []
@@ -173,7 +177,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
     control.directory(syshandle, cacheToDisc=cacheToDisc)
 
 
-def resolve(url, meta=None, icon=None, dash=False, live=False):
+def resolve(url, meta=None, icon=None, dash=False):
 
     item = control.item(path=url)
 
@@ -183,14 +187,14 @@ def resolve(url, meta=None, icon=None, dash=False, live=False):
     if not meta is None:
         item.setInfo(type='Video', infoLabels=meta)
 
-    if dash:
+    xbmc_python_ver = int(control.addon_details('xmbc.python', ["version"]).get('version').replace('.', ''))
+    ias_enabled = control.addon_details('inputstream.adaptive').get('enabled')
+
+    if dash and xbmc_python_ver > 224 and ias_enabled:
         item.setContentLookup(False)
         item.setMimeType('application/xml+dash')
         item.setProperty('inputstreamaddon', 'inputstream.adaptive')
         item.setProperty('inputstream.adaptive.manifest_type', 'mpd')
-        isa_version = int(control.infoLabel('System.AddonVersion(inputstream.adaptive)').replace('.', ''))
-        if isa_version >= 2018 and live:
-            item.setProperty('inputstream.adaptive.manifest_update_parameter', '&start_seq=$START_NUMBER$')
     else:
         pass
 

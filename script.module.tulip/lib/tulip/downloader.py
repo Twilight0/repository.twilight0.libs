@@ -33,7 +33,8 @@ import time
 AddonTitle = control.addonInfo('name')
 
 
-def download(url, dest, dp = None):
+def download(url, dest, dp=None):
+
     if not dp:
         dp = xbmcgui.DialogProgress()
         dp.create(AddonTitle,"Download In Progress",' ', ' ')
@@ -43,6 +44,7 @@ def download(url, dest, dp = None):
 
 
 def auto(url, dest, dp = None):
+
     dp = xbmcgui.DialogProgress()
     start_time=time.time()
     client.retriever(url, dest, lambda nb, bs, fs: _pbhookauto(nb, bs, fs, dp, start_time))

@@ -212,7 +212,10 @@ def retriever(source, destination, *args):
     Opener().retrieve(source, destination, *args)
 
 
-def parseDOM(html, name=u"", attrs={}, ret=False):
+def parseDOM(html, name=u"", attrs=None, ret=False):
+
+    if attrs is None:
+        attrs = {}
 
     if isinstance(name, str):  # Should be handled
         try:

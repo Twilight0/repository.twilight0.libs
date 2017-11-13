@@ -19,8 +19,8 @@
 '''
 
 
-import os, xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
-
+import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
+import os, json
 from init import syshandle
 
 
@@ -41,7 +41,7 @@ sortmethod = xbmcplugin.addSortMethod
 
 infoLabel = xbmc.getInfoLabel
 condVisibility = xbmc.getCondVisibility
-jsonrpc = xbmc.executeJSONRPC
+jsonrpc = xbmc.executeJSONRPC  # keeping this for compatibility
 keyboard = xbmc.Keyboard
 sleep = xbmc.sleep
 execute = xbmc.executebuiltin
@@ -134,12 +134,9 @@ def openSettings(query=None, id=addonInfo('id')):
 def Settings(id=addonInfo('id')):
 
     try:
-
         idle()
         xbmcaddon.Addon(id).openSettings()
-
     except:
-
         return
 
 
@@ -274,3 +271,59 @@ def sortmethods(method='unsorted', mask='%D'):
         return sortmethod(handle=syshandle, sortMethod=xbmcplugin.SORT_METHOD_SONG_USER_RATING)
     else:
         pass
+
+
+def json_rpc(command):
+
+    """This function was taken from tknorris's kodi.py"""
+
+    if not isinstance(command, basestring):
+        command = json.dumps(command)
+    response = jsonrpc(command)
+
+    return json.loads(response)
+
+
+def addon_details(addon_id, fields=None):
+
+    """
+    :param addon_id: Any addon id as string
+    :param fields: Possible fields as list [
+      "name",
+      "version",
+      "summary",
+      "description",
+      "path",
+      "author",
+      "thumbnail",
+      "disclaimer",
+      "fanart",
+      "dependencies",
+      "broken",
+      "extrainfo",
+      "rating",
+      "enabled",
+      "installed"
+    ]
+    Default argument: ["enabled"]
+    :return: Dictionary
+    """
+
+    if fields is None:
+        fields = ["enabled"]
+
+    command = {
+        "jsonrpc": "2.0", "method": "Addons.GetAddonDetails", "id": 1, "params": {
+            "addonid": addon_id, "properties": fields
+        }
+    }
+
+    result = json_rpc(command)['result']['addon']
+
+    return result
+
+def enable_addon(addon_id, enable=True):
+
+    command = {"jsonrpc":"2.0", "method": "Addons.SetAddonEnabled", "params": {"addonid": addon_id, "enabled": enable}, "id": 1}
+
+    json_rpc(command)
