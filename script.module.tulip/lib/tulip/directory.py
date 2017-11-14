@@ -188,7 +188,11 @@ def resolve(url, meta=None, icon=None, dash=False):
         item.setInfo(type='Video', infoLabels=meta)
 
     xbmc_python_ver = int(control.infoLabel('System.AddonVersion(xbmc.python)').replace('.', ''))
-    ias_enabled = control.addon_details('inputstream.adaptive').get('enabled')
+
+    try:
+        ias_enabled = control.addon_details('inputstream.adaptive').get('enabled')
+    except KeyError:
+        ias_enabled = False
 
     if dash and xbmc_python_ver > 224 and ias_enabled:
         item.setContentLookup(False)
