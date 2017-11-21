@@ -101,10 +101,6 @@ def okDialog(heading, line1):
     return dialog.ok(heading, line1)
 
 
-def inputDialog(heading):
-    return dialog.input(heading)
-
-
 def yesnoDialog(line1, line2='', line3='', heading=addonInfo('name'), nolabel=None, yeslabel=None):
     return dialog.yesno(heading, line1, line2, line3, nolabel, yeslabel)
 
@@ -157,11 +153,11 @@ def set_view_mode(vmid):
 
 
 # for compartmentalized theme addons
-def addonmedia(icon, addonid=addonInfo('id'), theme=None):
+def addonmedia(icon, addonid=addonInfo('id'), theme=None, media_subfolder=True):
     if not theme:
-        return join(addon(addonid).getAddonInfo('path'), 'resources', 'media', icon)
+        return join(addon(addonid).getAddonInfo('path'), 'resources', 'media' if media_subfolder else '', icon)
     else:
-        return join(addon(addonid).getAddonInfo('path'), 'resources', 'media', theme, icon)
+        return join(addon(addonid).getAddonInfo('path'), 'resources', 'media' if media_subfolder else '', theme, icon)
 
 
 def sortmethods(method='unsorted', mask='%D'):
