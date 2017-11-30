@@ -1,3 +1,17 @@
 
 *\.idea/
 _tools/
+
+service\.streamlink\.proxy/
+
+script\.module\.unshortenit/
+
+script\.module\.tulip/
+
+script\.module\.streamlink\.plugins/
+
+script\.module\.streamlink\.crypto/
+
+script\.module\.streamlink\.base/
+
+repository\.twilight0\.libs/
