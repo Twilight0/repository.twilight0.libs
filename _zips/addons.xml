@@ -137,6 +137,34 @@
 	</extension>
 </addon>
 
+<addon id="service.banners.mod" name="Banners" version="1.9.1" provider-name="Dalibor Lanik"> <!-- Unique ID and name of the addon -->
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/> <!-- Be able to use python in the addon -->
+    <import addon="script.module.pil" version="1.1.7"/>
+      <import addon="script.module.parsedom" version="2.5.2"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="startup"> <!-- Extend KODI with a service. Start the addon when starting KODI, and run "default.py" -->
+  </extension>
+  <extension point="xbmc.python.script" library="standalone.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata"> <!-- Additional addon information -->
+    <platform>all</platform>
+    <website>http://projects.lanik.org/KodiProject_Banners.htm</website>
+    <summary lang="en">Display banners while video plays</summary>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.kodi.tv/showthread.php?tid=283342</forum>
+    <email>dalibor@lanik.org</email>
+    <description lang="en">Displays banners while playing video</description>
+    <news>v1.9 [CR]
+- banner size and position fix and offset for standalone json calls [CR]
+</news>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="service.streamlink.proxy" name="Streamlink Proxy" version="4.1.0" provider-name="Twilight0">
   <requires>
       <import addon="xbmc.python" version="2.24.0"/>
