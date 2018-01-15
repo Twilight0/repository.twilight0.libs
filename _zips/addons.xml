@@ -81,7 +81,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.streamlink.crypto" name="streamlink.crypto" version="1.2.0" provider-name="Streamlink.crypto">
+<addon id="script.module.streamlink.crypto" name="streamlink.crypto" version="1.3.0" provider-name="Streamlink.crypto">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>
