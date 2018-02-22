@@ -89,7 +89,7 @@
 	</extension>
 </addon>
 
-<addon id="script.module.unshortenit" name="Unshortenit Module" version="0.3.0" provider-name="Jeff Kehler, Twilight0">
+<addon id="script.module.unshortenit" name="Unshortenit Module" version="0.3.1" provider-name="Jeff Kehler, Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.requests" version="2.12.4"/>
