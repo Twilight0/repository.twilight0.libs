@@ -1,3 +1,29 @@
++ 2018.02.24
+- Fixed segmented module (ignore-names commit)
+- Bumped to commit #3b7dae75d924caa94d5d2e023b85959f0ac8ef39
+
++ 2018.02.15
+- Added a forgotten import into plugin.py
+- Bumped to commit #81148668631feef066dbcd4f92f4ec0d6c9d7222
+
++ 2018.02.07
+- Removed dependency for custom plugins
+~ [hls] New option --hls-segment-ignore-names
+
++ 2018.02.05
+- Bumped up to the latest a8d22f15c789045d8c4f709e587b6e443e8816c8 commit
+
++ 2018.01.14
+- Fix introduced in hls plugin for locale, thanks to jairoxyz
+- Minor other fixes
+
++ 2018.01.11
+- Based on https://github.com/streamlink/streamlink/commit/790bdf26a62aff74a35abc99fc4f3c07d6e5dcc1
+  > Includes unmerged PR: https://github.com/streamlink/streamlink/pull/1423
+
++ 2017.11.18
+- Rebased on upstream 0.9.0
+
 + 2017.09.20
 - Fixes for ordered dict import for Kodi 16
 - Rebased on upstream 0.8.1 release
