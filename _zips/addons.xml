@@ -70,10 +70,9 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="1.3.5" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="1.4.0" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
-		<import addon="script.module.requests" optional="true"/>
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
@@ -82,10 +81,15 @@
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
 		<source>https://github.com/Twilight0/script.module.tulip</source>
-		<news>[B]1.3.5[/B]
-- New convert function in youtube module
-- New strip accents function in cleantitle module
-- Cosmetics</news>
+		<news>[B]1.4.0[/B]
+- Added some functions in control module
+- Added m3u8 parser sublib
+- Added iso8601 module
+- Adapted library to dual python 2/3 compatibility (untested, though)
+- Removed optional requests import
+- Replaced downloader module with a function adapted from tknorris's shared modules
+- Removed unicode logging ability from log module
+- Removed parsedom(2) module, legacy client.parsedom is now used only</news>
 	</extension>
 </addon>
 
