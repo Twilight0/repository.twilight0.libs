@@ -14,7 +14,7 @@
     </extension>
 </addon>
 
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.02.24" provider-name="Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.05.16" provider-name="Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.12.4"/>
@@ -27,15 +27,14 @@
     <description>Streamlink Library for Kodi</description>
     <platform>all</platform>
     <license>Simplified BSD</license>
-    <source>https://github.com/streamlink/streamlink</source>
+    <source>https://github.com/Twilight0/script.module.streamlink.base/</source>
     <language>en</language>
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
     <news>
-+ 2018.02.24
-- Fixed segmented module (ignore-names commit)
-- Bumped to commit #3b7dae75d924caa94d5d2e023b85959f0ac8ef39
++ 2018.05.16
+- Bumped to latest commit
     </news>
   </extension>
 </addon>
