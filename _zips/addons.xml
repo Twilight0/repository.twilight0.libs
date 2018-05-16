@@ -14,7 +14,7 @@
     </extension>
 </addon>
 
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.05.16" provider-name="Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.05.17" provider-name="Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.12.4"/>
@@ -33,8 +33,9 @@
       <icon>resources/icon.png</icon>
     </assets>
     <news>
-+ 2018.05.16
++ 2018.05.17
 - Bumped to latest commit
+- Fixes in which util
     </news>
   </extension>
 </addon>
