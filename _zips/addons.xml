@@ -67,7 +67,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.0" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.1" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 	</requires>
@@ -78,7 +78,7 @@
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
 		<source>https://github.com/Twilight0/script.module.tulip</source>
-		<news>[B]2.0.0[/B]
+		<news>[B]2.0.X[/B]
 - Significantly improved Python 3 compatibility:
   > Only absolute imports are used
   > Added compat module to allow several modules imports compatibility
