@@ -14,7 +14,7 @@
     </extension>
 </addon>
 
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.06.10.1" provider-name="Streamlink Devs, Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.06.12.1" provider-name="Streamlink Devs, Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.12.4"/>
@@ -32,10 +32,8 @@
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
-    <news>+ 2018.06.10
-- Various plugin updates
-- Added issue template
-- Improved README</news>
+    <news>+ 2018.06.12
+- Plugins clean up and updates</news>
   </extension>
 </addon>
 
@@ -69,7 +67,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="1.4.1" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.0" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 	</requires>
@@ -80,8 +78,14 @@
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
 		<source>https://github.com/Twilight0/script.module.tulip</source>
-		<news>[B]1.4.1[/B]
-- Added parameters with default arguments (table) into bookmarks module</news>
+		<news>[B]2.0.0[/B]
+- Significantly improved Python 3 compatibility:
+  > Only absolute imports are used
+  > Added compat module to allow several modules imports compatibility
+  > Several other related tweaks
+- Improved youtube module to allow more results from video lists and playlists
+- Added support for resolveurl into youtube module
+- Added login support for client.request module</news>
 	</extension>
 </addon>
 
