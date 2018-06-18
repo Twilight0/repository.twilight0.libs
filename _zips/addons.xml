@@ -67,7 +67,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.3" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.4" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 	</requires>
@@ -89,7 +89,8 @@
 - Added support for resolveurl into youtube module
 - Added login support for client.request module
 - Added orderdict conditional into compat module
-- Added multiprocess support along with multithreading into workers module</news>
+- Added multiprocess support along with multithreading into workers module
+  > Will not work on Android so fallback to threading has been added</news>
 	</extension>
 </addon>
 
