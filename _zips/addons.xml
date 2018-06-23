@@ -51,7 +51,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.5" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.6" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 	</requires>
@@ -70,6 +70,7 @@
 - Improved youtube module to allow more results from video lists and playlists
   > Tweaks and cosmetics added as well
 - Improved directory module by having utf-8 encoding optional via exception
+- Added parameters for more manifest types and adaptive types
 - Added support for resolveurl into youtube module
 - Added login support for client.request module
 - Added orderdict conditional into compat module
