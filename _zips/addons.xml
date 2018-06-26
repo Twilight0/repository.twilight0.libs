@@ -51,7 +51,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.7" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.8" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 	</requires>
