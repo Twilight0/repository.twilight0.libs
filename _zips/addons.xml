@@ -51,7 +51,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.10" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.11" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 	</requires>
@@ -78,7 +78,8 @@
   > Will not work on Android so fallback to threading has been added
 - Various other efficiency tweaks
 - New m3u playlist maker function
-- Added busy function to activate busydialog</news>
+- Added busy function to activate busydialog
+- Removed conditional and accompanying function for optional resolvers</news>
 	</extension>
 </addon>
 
