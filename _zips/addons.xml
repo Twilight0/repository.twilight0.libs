@@ -51,7 +51,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.11" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.12" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 	</requires>
@@ -74,12 +74,11 @@
 - Added support for resolveurl into youtube module
 - Added login support for client.request module
 - Added orderdict conditional into compat module
-- Added multiprocess support along with multithreading into workers module
-  > Will not work on Android so fallback to threading has been added
 - Various other efficiency tweaks
 - New m3u playlist maker function
 - Added busy function to activate busydialog
-- Removed conditional and accompanying function for optional resolvers</news>
+- Removed conditional and accompanying function for optional resolvers
+- Added headers parameter into spoofer function and improved it</news>
 	</extension>
 </addon>
 
