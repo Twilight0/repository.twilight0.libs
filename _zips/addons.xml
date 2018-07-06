@@ -51,7 +51,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.12" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.13" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 	</requires>
@@ -78,7 +78,8 @@
 - New m3u playlist maker function
 - Added busy function to activate busydialog
 - Removed conditional and accompanying function for optional resolvers
-- Added headers parameter into spoofer function and improved it</news>
+- Added headers parameter into spoofer function and improved it
+- Several enhancements into resolve function</news>
 	</extension>
 </addon>
 
