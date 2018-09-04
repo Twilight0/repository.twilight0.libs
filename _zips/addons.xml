@@ -51,35 +51,38 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.18" provider-name="Twilight0">
-	<requires>
-		<import addon="xbmc.python" version="2.24.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Tulip Helper module</summary>
-		<description lang="en">Tulip Routine Libraries are based on Lambda's "lamlib". It has some additions, most being in control module.</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<source>https://github.com/Twilight0/script.module.tulip</source>
-		<news>[B]2.0.X[/B]
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.19" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Tulip Helper module</summary>
+        <description lang="en">Tulip Routine Libraries are based on Lambda's "lamlib". It has some additions, most being in control module.</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <source>https://github.com/Twilight0/script.module.tulip</source>
+        <news>[B]2.0.X[/B]
 - Significantly improved Python 3 compatibility:
   > Only absolute imports are used
   > Added compat module to allow several modules imports compatibility
   > Several other related tweaks
 - Improved youtube module to allow more results from video lists and playlists
   > Tweaks and cosmetics added as well
-- Improved directory module by having utf-8 encoding optional via exception
-- Added parameters for more manifest types and adaptive types
+- Several enhancements into directory module:
+  > UTF-8 encoding optional via exception into quoted queries
+  > Added parameters for more manifest types and adaptive types
+  > Several other enhancements into resolve function
+  > New m3u playlist maker function
+  > isPlayable parameter made available for disabling auto playable assignment based on isFolder
 - Added login support for client.request module
-- Added orderdict conditional into compat module
-- Various other efficiency tweaks
-- New m3u playlist maker function
+- Simplified random agent picking, addition of mobile agents function
+- Added ordereddict conditional into compat module
 - Added busy function to activate busydialog
 - Removed conditional and accompanying function for optional resolvers
 - Added headers parameter into spoofer function and improved it
-- Several enhancements into resolve function</news>
-	</extension>
+- Various other efficiency tweaks</news>
+    </extension>
 </addon>
 
 <addon id="script.module.unshortenit" name="Unshortenit Module" version="0.3.1" provider-name="Jeff Kehler, Twilight0">
