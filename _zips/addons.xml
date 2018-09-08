@@ -51,7 +51,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.20" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.21" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
     </requires>
@@ -77,6 +77,8 @@
   > isPlayable parameter made available for disabling auto playable assignment based on isFolder
 - Added login support for client.request module
 - Improved ssl verification on client module
+- Improved redirection handler
+- Added parse_headers function which converts a response/request headers string into dictionary
 - Simplified random agent picking, addition of mobile agents function
 - Added ordereddict conditional into compat module
 - Added busy function to activate busydialog
