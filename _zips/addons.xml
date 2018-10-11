@@ -51,7 +51,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.21" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.22" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
     </requires>
@@ -75,6 +75,7 @@
   > Several other enhancements into resolve function
   > New m3u playlist maker function
   > isPlayable parameter made available for disabling auto playable assignment based on isFolder
+  > Added an alternative mode for playing an item which does not require the isPlayable property
 - Added login support for client.request module
 - Improved ssl verification on client module
 - Improved redirection handler
@@ -84,6 +85,7 @@
 - Added busy function to activate busydialog
 - Removed conditional and accompanying function for optional resolvers
 - Added headers parameter into spoofer function and improved it
+- Re-addition of manifest_update_parameter for resolve function on live streams
 - Various other efficiency tweaks</news>
     </extension>
 </addon>
