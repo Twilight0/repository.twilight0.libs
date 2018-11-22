@@ -37,7 +37,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.streamlink.crypto" name="streamlink.crypto" version="1.4.0" provider-name="Streamlink.crypto">
+<addon id="script.module.streamlink.crypto" name="streamlink.crypto" version="1.5.0" provider-name="Streamlink.crypto">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>
@@ -50,14 +50,14 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.22" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.23" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.addon.metadata">
-        <summary lang="en">Tulip Helper module</summary>
-        <description lang="en">Tulip Routine Libraries are based on Lambda's "lamlib". It has some additions, most being in control module.</description>
+        <summary lang="en">Tulip Helper library</summary>
+        <description lang="en">Tulip Routine Libraries are based on Lambda's "lamlib".</description>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <source>https://github.com/Twilight0/script.module.tulip</source>
@@ -83,7 +83,7 @@
 - Added ordereddict conditional into compat module
 - Added busy function to activate busydialog
 - Removed conditional and accompanying function for optional resolvers
-- Added headers parameter into spoofer function and improved it
+- Added headers parameter into spoofer function and improved it. Now capable of wrapping a url as well.
 - Re-addition of manifest_update_parameter for resolve function on live streams
 - Various other efficiency tweaks</news>
     </extension>
