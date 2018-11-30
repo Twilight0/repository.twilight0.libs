@@ -4,8 +4,6 @@ _tools/
 
 /service\.streamlink\.proxy/
 
-/script\.module\.unshortenit/
-
 /script\.module\.tulip/
 
 /script\.module\.streamlink\.plugins/
