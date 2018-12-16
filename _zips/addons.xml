@@ -54,9 +54,10 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.0.24" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.1.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.kodi-six" version="0.0.2"/>
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.addon.metadata">
@@ -65,7 +66,14 @@
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <source>https://github.com/Twilight0/script.module.tulip</source>
-        <news>[B]2.0.X[/B]
+        <news>
+[B]2.1.0[/B]
+- Utilize kodi-six to improve further Python 2/3 compatibility
+- Added "builtin" function into directory module, which can execute various builtin commands with arguments
+- Added various supplementary fuctions into control module
+- Various other tweaks
+
+[B]2.0.X[/B]
 - Significantly improved Python 3 compatibility:
   > Only absolute imports are used
   > Added compat module to allow several modules imports compatibility
