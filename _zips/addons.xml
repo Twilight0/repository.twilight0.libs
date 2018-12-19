@@ -54,7 +54,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.1.1" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.1.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -68,10 +68,11 @@
         <source>https://github.com/Twilight0/script.module.tulip</source>
         <news>
 [B]2.1.X[/B]
-- Utilize kodi-six to improve further Python 2/3 compatibility
+- Utilize kodi-six to further improve Python 2/3 compatibility
 - Added "builtin" function into directory module, which can execute various builtin commands with arguments
 - Added various supplementary fuctions into control module
 - Added argv parameter to directory module's function to work with Leia's new python caching (requires testing)
+- Tweaked open settings window &amp; set focus methods
 - Various other tweaks</news>
     </extension>
 </addon>
