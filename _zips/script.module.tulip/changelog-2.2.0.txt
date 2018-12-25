@@ -1,3 +1,15 @@
+[B]2.2.X[/B]
+- Reincluded url_dispatcher module for addons that may use it in the future
+- New reload skin function
+
+[B]2.1.X[/B]
+- Utilize kodi-six to further improve Python 2/3 compatibility
+- Added "builtin" function into directory module, which can execute various builtin commands with arguments
+- Added various supplementary fuctions into control module
+- Added argv parameter to directory module's function to work with Leia's new python caching (requires testing)
+- Tweaked open settings window & set focus methods
+- Various other tweaks
+
 [B]2.0.X[/B]
 - Significantly improved Python 3 compatibility:
   > Only absolute imports are used
@@ -11,6 +23,7 @@
   > Several other enhancements into resolve function
   > New m3u playlist maker function
   > isPlayable parameter made available for disabling auto playable assignment based on isFolder
+  > Added an alternative mode for playing an item which does not require the isPlayable property
 - Added login support for client.request module
 - Improved ssl verification on client module
 - Improved redirection handler
@@ -19,7 +32,8 @@
 - Added ordereddict conditional into compat module
 - Added busy function to activate busydialog
 - Removed conditional and accompanying function for optional resolvers
-- Added headers parameter into spoofer function and improved it
+- Added headers parameter into spoofer function and improved it. Now capable of wrapping a url as well.
+- Re-addition of manifest_update_parameter for resolve function on live streams
 - Various other efficiency tweaks
 
 [B]1.4.1[/B]

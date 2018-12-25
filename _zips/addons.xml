@@ -54,19 +54,23 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.1.2" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.2.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.addon.metadata">
-        <summary lang="en">Tulip Helper library</summary>
-        <description lang="en">Tulip Routine Libraries are based on Lambda's "lamlib".</description>
+        <summary lang="en">Tulip Helper libraries</summary>
+        <description lang="en">Tulip Routine Libraries combines the best elements from Lambda's "lamlib" and tknorris's shared modules. Also includes various enhancements, newer and improved functions and Python 3 compatibility, though the latter is largely untested.</description>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <source>https://github.com/Twilight0/script.module.tulip</source>
         <news>
+[B]2.2.X[/B]
+- Reincluded url_dispatcher module for addons that may use it in the future
+- New reload skin function
+
 [B]2.1.X[/B]
 - Utilize kodi-six to further improve Python 2/3 compatibility
 - Added "builtin" function into directory module, which can execute various builtin commands with arguments
