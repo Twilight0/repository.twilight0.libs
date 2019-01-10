@@ -54,7 +54,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.2.4" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.2.5" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -74,6 +74,7 @@
 - xbmc.Playlist is now callable via lambda function. Mode 1 for video (default), Mode 0 for audio
 - Add function in directory module now accepts streaminfo data (as dictionary)
 - Added StringIO in compat module
+- Plugin url optimization with join string method on directory module
 
 [B]2.1.X[/B]
 - Utilize kodi-six to further improve Python 2/3 compatibility
