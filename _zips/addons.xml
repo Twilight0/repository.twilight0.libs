@@ -14,7 +14,7 @@
     </extension>
 </addon>
 
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.12.05" provider-name="Streamlink Devs, Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2019.03.16" provider-name="Streamlink Devs, Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.12.4"/>
@@ -32,12 +32,11 @@
     <assets>
         <icon>icon.png</icon>
     </assets>
-    <news>+ 2018.12.05
-- Corrected icon asset location, ensuring backwards compatibility
+    <news>+ 2019.03.16
+- Updated to latest commit e96c725cb553027dd1ca7b1c278211b57947b05c
 
-+ 2018.12.04
-- Rebase to latest upstream commit b99249e941852341b06b267ffc1ca1d144c6b718
-- New icon</news>
++ 2018.12.05
+- Corrected icon asset location, ensuring backwards compatibility</news>
   </extension>
 </addon>
 
