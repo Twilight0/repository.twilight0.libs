@@ -45,7 +45,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.streamlink.crypto" name="Streamlink Crypto" version="1.5.1" provider-name="Twilight0">
+<addon id="script.module.streamlink.crypto" name="Streamlink Crypto" version="1.5.2" provider-name="Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>
