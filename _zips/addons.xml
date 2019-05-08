@@ -14,7 +14,7 @@
     </extension>
 </addon>
 
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2019.05.03" provider-name="Streamlink Devs, Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2019.05.08" provider-name="Streamlink Devs, Twilight0">
   <requires>
       <import addon="xbmc.python" version="2.24.0"/>
       <import addon="script.module.requests" version="2.12.4"/>
@@ -32,15 +32,13 @@
       <assets>
           <icon>icon.png</icon>
       </assets>
-      <news>+2019.05.03
+      <news>+2019.05.08
+- Added vimeo plugin
+
++2019.05.03
 - Bumped to upstream commit c8ed1daff14ac03195870238b9b900c1109dd5c1
 - Include PR #2441 from upstream
-- Add exception for ctypes on namedpipe for XBOX (MemoryError). So its a known issue that streamlink does not work on this platform
-
-+ 2019.03.17
-- Fixed icon
-- Updated changelog.txt
-- Moved and updated six module into utils directory</news>
+- Add exception for ctypes on namedpipe for XBOX (MemoryError). So its a known issue that streamlink does not work on this platform</news>
   </extension>
 </addon>
 
