@@ -8,7 +8,7 @@ _tools/
 
 /script\.module\.streamlink\.plugins/
 
-/script\.module\.streamlink\.crypto/
+/script\.module\.cryptolib/
 
 /script\.module\.streamlink\.base/
 
