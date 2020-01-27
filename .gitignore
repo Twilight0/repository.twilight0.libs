@@ -12,6 +12,8 @@ _tools/
 
 /script\.module\.streamlink\.base/
 
+/script\.module\.streamlink
+
 /repository\.twilight0\.libs/
 
 /service\.banners\.mod/
