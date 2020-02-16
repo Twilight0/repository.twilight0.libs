@@ -33,6 +33,7 @@
       <import addon="script.module.requests" version="2.12.4"/>
       <import addon="script.module.futures" version="2.2.0"/>
       <import addon="script.module.cryptolib" version="1.1.0"/>
+<!--      <import addon="script.module.pycryptodome" version="3.4.3"/>-->
   </requires>
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
@@ -51,7 +52,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.5.9" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.5.10" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
