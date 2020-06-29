@@ -14,41 +14,6 @@
     </extension>
 </addon>
 
-<addon id="script.module.cloudscraper" name="CloudScraper2" version="1.2.24" provider-name="venomous">
-  <requires>
-    <import addon="xbmc.python" version="2.26.0"/>
-    <import addon="script.module.requests" />
-
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.python.pluginsource" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">cloudscraper</summary>
-    <description lang="en_gb">cloudscraper</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license></license>
-    <forum></forum>
-    <website></website>
-    <email></email>
-    <source></source>
-  </extension>
-</addon>
-
-<addon id="script.module.cryptolib" name="Crypto Libraries" version="1.1.1" provider-name="Twilight0">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Pure Python implementation of some cryptographic libraries</summary>
-    <source>https://github.com/Twilight0/script.module.cryptolib</source>
-    <platform>all</platform>
-    <license>MIT</license>
-  </extension>
-</addon>
-
 <addon id="script.module.jsbeautifier" name="Jsbeautifier" version="1.10.3" provider-name="jsbeautifier">
     <requires>
         <import addon="xbmc.python" version="2.14.0"/>
@@ -122,34 +87,6 @@
 - Added some debug logging for client.request and directory.add
 - Removed some unused functions
 - Minor other tweaks</news>
-    </extension>
-</addon>
-
-<addon id="service.streamlink.proxy" name="Streamlink Proxy" version="4.1.2" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.streamlink.base" version="2018.06.12"/>
-        <!--<import addon="script.module.streamlink.plugins" version="1.0.3"/>-->
-    </requires>
-    <extension point="xbmc.service" library="resources/lib/service.py" start="login"/>
-    <extension point="xbmc.python.pluginsource" library="options.py">
-        <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <language>en de el</language>
-        <summary>Streamlink Proxy</summary>
-        <description>Streamlink Proxy for Kodi</description>
-        <platform>all</platform>
-        <license>GPLv3</license>
-        <source>https://github.com/Twilight0/service.streamlink.proxy</source>
-        <size>172839</size>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-        <news>+ 4.1.2
-- Removed plugins dependency
-- Bumped base module dependency to latest</news>
     </extension>
 </addon>
 </addons>
