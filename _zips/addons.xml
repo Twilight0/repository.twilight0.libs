@@ -61,7 +61,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.5.11" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.6.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -73,7 +73,12 @@
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <source>https://github.com/Twilight0/script.module.tulip</source>
-        <news>[B]2.5.X[/B]
+        <news>[B]2.6.X[/B]
+- Removed cloudflare related functions as they need too frequent updates
+- Improved parsers module
+- Logging module tweaks
+
+[B]2.5.X[/B]
 - Tweaks in client module (updated cfscrape &amp; some minor other tweaks)
 - Added the parsers module
 - Moved parseDOM into parsers module, retained import
