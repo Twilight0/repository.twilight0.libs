@@ -61,7 +61,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.6.0" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.6.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -76,7 +76,9 @@
         <news>[B]2.6.X[/B]
 - Removed cloudflare related functions as they need too frequent updates
 - Improved parsers module
+- Added feed parser &amp; thumbmaker into youtube module
 - Logging module tweaks
+- Updated user agents
 
 [B]2.5.X[/B]
 - Tweaks in client module (updated cfscrape &amp; some minor other tweaks)
