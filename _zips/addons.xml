@@ -61,7 +61,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.6.3" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.6.4" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -80,6 +80,7 @@
 - Logging module tweaks
 - Updated user agents
 - Allow to bypass cache in the request function
+- Allow nextitem to have title and/or name property
 
 [B]2.5.X[/B]
 - Tweaks in client module (updated cfscrape &amp; some minor other tweaks)
