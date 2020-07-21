@@ -61,7 +61,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.6.5" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Libraries" version="2.6.6" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -79,7 +79,7 @@
 - Added feed parser &amp; thumbmaker into youtube module
 - Logging module tweaks
 - Updated user agents
-- Allow to bypass cache in the request function
+- Allow some modules to be used outside of Kodi as standalone ones
 - Allow nextitem to have title and/or name property
 
 [B]2.5.X[/B]
