@@ -61,7 +61,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Library" version="2.6.9" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Routine Library" version="2.6.10" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -81,7 +81,8 @@
 - Updated user agents
 - Allow some modules to be used outside of Kodi as standalone ones
 - Allow nextitem to have title and/or name property
-- Add ability to clear bookmarks
+- Add ability to clear all bookmarks at once
+- Add integer labels as optional parameters
 
 [B]2.5.X[/B]
 - Tweaks in client module (updated cfscrape &amp; some minor other tweaks)
