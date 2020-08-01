@@ -61,15 +61,15 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Routine Library" version="2.6.10" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="2.6.11" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.addon.metadata">
-        <summary lang="en">Tulip helper library</summary>
-        <description lang="en">Tulip Routine Library combines the best elements from Lambda's "lamlib" and tknorris's shared modules. Also includes various enhancements, newer and improved functions and Python 3 compatibility, though the latter is largely untested.</description>
+        <summary lang="en">Tulip library with helper functions for Kodi and its forks</summary>
+        <description lang="en">Tulip library combines the best elements from Lambda's "lamlib" and tknorris's shared modules. Also includes various enhancements, newer and improved functions and Python 3 compatibility, though the latter is largely untested. Can also be as standalone</description>
         <platform>all</platform>
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/script.module.tulip</source>
@@ -83,6 +83,7 @@
 - Allow nextitem to have title and/or name property
 - Add ability to clear all bookmarks at once
 - Add integer labels as optional parameters
+- A few changes for Kodi 19+
 
 [B]2.5.X[/B]
 - Tweaks in client module (updated cfscrape &amp; some minor other tweaks)
