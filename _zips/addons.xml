@@ -65,7 +65,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="2.6.12" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="2.6.13" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -87,6 +87,8 @@
 - Allow nextitem to have title and/or name property
 - Add ability to clear all bookmarks at once
 - Add integer labels as optional parameters
+- Moved a few functions from client to other modules
+- Added the quote paths function, useful for non ascii characters in urls
 - A few changes for Kodi 19+
 
 [B]2.5.X[/B]
