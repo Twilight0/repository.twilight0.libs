@@ -14,6 +14,19 @@
     </extension>
 </addon>
 
+<addon id="script.module.futures" name="Futures dummy" version="0.0.0.1" provider-name="Twilight0">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>Futures dummy</summary>
+    <description>Futures dummy</description>
+    <platform>all</platform>
+    <license>BSD</license>
+  </extension>
+</addon>
+
 <addon id="script.module.jsbeautifier" name="Jsbeautifier" version="1.10.3" provider-name="jsbeautifier">
     <requires>
         <import addon="xbmc.python" version="2.14.0"/>
@@ -30,11 +43,11 @@
     </extension>
 </addon>
 
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2020.09.07" provider-name="Streamlink Devs, Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2020.09.07.1" provider-name="Streamlink Devs, Twilight0">
   <requires>
       <import addon="xbmc.python" version="2.26.0"/>
       <import addon="script.module.requests" version="2.12.4"/>
-      <import addon="script.module.futures" version="2.2.0" optional="true"/>
+      <import addon="script.module.futures" version="0.0.0.1"/>
       <import addon="script.module.pycryptodome" />
   </requires>
   <extension point="xbmc.python.module" library="resources/lib/"/>
@@ -48,9 +61,10 @@
       <assets>
           <icon>icon.png</icon>
       </assets>
-      <news>+2020.09.07
+      <news>+2020.09.07.1
 - Update to latest upstream commit
-- Automatically send yes in the dialog for the optional addon installation
+- Remove on demand installation of futures module
+- Add dummy futures module for Kodi 19
 
 +2020.08.09
 - Update to latest upstream commit
