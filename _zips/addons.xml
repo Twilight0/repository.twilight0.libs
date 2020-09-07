@@ -65,7 +65,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="2.6.15" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="2.6.16" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -89,6 +89,8 @@
 - Add integer labels as optional parameters
 - Moved a few functions from client to other modules
 - Added the quote paths function, useful for non ascii characters in urls
+- Fix in url_dispatcher module
+- Added a few functions into control module
 - A few changes for Kodi 19+
 
 [B]2.5.X[/B]
