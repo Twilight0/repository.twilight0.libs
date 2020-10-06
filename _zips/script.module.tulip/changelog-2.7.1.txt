@@ -1,3 +1,7 @@
+[B]2.7.X[/B]
+- New cache functions (taken from ResolveURL and adapted)
+- Various other tweaks
+
 [B]2.6.X[/B]
 - Removed cloudflare related functions as they need too frequent updates
 - Improved parsers module
