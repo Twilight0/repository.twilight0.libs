@@ -72,7 +72,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="2.7.1" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="2.7.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
