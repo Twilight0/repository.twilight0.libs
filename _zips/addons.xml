@@ -136,7 +136,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="2.8.1" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="2.8.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
