@@ -107,6 +107,22 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
+<addon id="script.module.resolveurl.pluginsgr" version="0.0.1" name="PluginsGR" provider-name="Twilight0">
+	<requires>
+		<!-- <import addon="xbmc.python" version="2.1.0"/> -->
+        <import addon="script.module.resolveurl" version="5.1.17" />
+	</requires>
+	<extension point="xbmc.python.module" library="resources/plugins" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Main resolvers, useful for converting html/js into playable content from various hosts (Greek ones).</summary>
+		<description lang="en">Main resolvers, useful for converting html/js into playable content from various hosts (Greek ones).</description>
+		<platform>all</platform>
+		<news>Version 0.0.1 (January 04, 2021)
+
+- Initial version</news>
+	</extension>
+</addon>
+
 <addon id="script.module.streamlink.base" name="Streamlink Library" version="2020.09.07.1" provider-name="Streamlink Devs, Twilight0">
   <requires>
       <import addon="xbmc.python" version="2.26.0"/>

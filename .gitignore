@@ -20,5 +20,6 @@ _tools/
 
 /script\.module\.futures/
 
-
 /script\.module\.metadatautils/
+
+/script\.module\.resolveurl\.pluginsgr/
