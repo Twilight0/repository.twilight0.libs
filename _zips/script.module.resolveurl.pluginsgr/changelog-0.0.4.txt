@@ -1,0 +1,14 @@
+Version 0.0.3 (January 18, 2021)
+- Updated ert
+
+Version 0.0.3 (January 05, 2021)
+- Updated alphacy
+
+Version 0.0.2 (January 04, 2021)
+
+- Updated star
+- Updated ert
+
+Version 0.0.1 (January 04, 2021)
+
+- Initial version
