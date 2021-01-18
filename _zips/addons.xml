@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-    <addon id="repository.twilight0.libs" name="Twilight0 Libs Repository" version="1.1" provider-name="Twilight0">
+    <addon id="repository.twilight0.libs" name="Twilight0 Libs Repository" version="1.2" provider-name="Twilight0">
         <extension point="xbmc.addon.repository" name="Twilight0 Libs Repository">
             <info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>
@@ -11,7 +11,11 @@
             <summary>Repository for library addons</summary>
             <description>Repository for library addons</description>
             <platform>all</platform>
-    </extension>
+            <assets>
+                <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
+            </assets>
+        </extension>
 </addon>
 
 <addon id="script.module.futures" name="Futures dummy" version="0.0.0.1" provider-name="Twilight0">
@@ -163,7 +167,7 @@ Version 0.0.1 (January 04, 2021)
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="2.8.2" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="2.8.3" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -180,10 +184,15 @@ Version 0.0.1 (January 04, 2021)
 - New utils module
 - Updated user agent strings
 - Updated m3u8 modules
+- Various fixes &amp; tweaks for Kodi 19
 
 [B]2.7.X[/B]
 - New cache functions (taken from ResolveURL and adapted)
 - Various other tweaks</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
 </addon>
 </addons>
