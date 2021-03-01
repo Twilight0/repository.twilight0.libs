@@ -18,9 +18,9 @@
         </extension>
 </addon>
 
-<addon id="script.module.futures" name="Futures dummy" version="0.0.0.1" provider-name="Twilight0">
+<addon id="script.module.futures" name="Futures dummy" version="0.0.0.2" provider-name="Twilight0">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="xbmc.addon" version="16.1.000"/>
   </requires>
   <extension point="xbmc.python.module" library="lib"/>
   <extension point="xbmc.addon.metadata">
@@ -31,9 +31,9 @@
   </extension>
 </addon>
 
-<addon id="script.module.jsbeautifier" name="Jsbeautifier" version="1.10.3" provider-name="jsbeautifier">
+<addon id="script.module.jsbeautifier" name="Jsbeautifier" version="1.10.3.1" provider-name="jsbeautifier">
     <requires>
-        <import addon="xbmc.python" version="2.14.0"/>
+        <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.six" version="1.6.1" />
     </requires>
     <extension point="xbmc.python.module" library="lib" />
@@ -47,9 +47,9 @@
     </extension>
 </addon>
 
-<addon id="script.module.metadatautils" name="Metadata and Artwork module" version="1.0.35" provider-name="marcelveldt and others">
+<addon id="script.module.metadatautils" name="Metadata and Artwork module" version="1.0.35.1" provider-name="marcelveldt and others">
     <requires>
-        <!-- <import addon="xbmc.python" version="3.0.0"/> -->
+        <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.requests" version="2.3.0"/>
         <import addon="script.module.beautifulsoup4" version="4.0.0" />
         <import addon="script.module.thetvdb" version="0.0.1" />
