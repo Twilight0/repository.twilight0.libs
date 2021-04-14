@@ -1,0 +1,25 @@
+Version 0.0.8 (April 14, 2021)
+- Add userload (until it gets merged upstream)
+
+Version 0.0.7 (April 11, 2021)
+- Add highstream tv (until it gets merged upstream)
+
+Version 0.0.6 (April 05, 2021)
+- Update skai
+- Add mega
+- Removed euronews
+
+Version 0.0.4 (January 18, 2021)
+- Updated ert
+
+Version 0.0.3 (January 05, 2021)
+- Updated alphacy
+
+Version 0.0.2 (January 04, 2021)
+
+- Updated star
+- Updated ert
+
+Version 0.0.1 (January 04, 2021)
+
+- Initial version
