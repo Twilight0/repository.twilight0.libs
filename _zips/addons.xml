@@ -111,7 +111,7 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
-<addon id="script.module.resolveurl.pluginsgr" version="0.0.10" name="PluginsGR" provider-name="Twilight0">
+<addon id="script.module.resolveurl.pluginsgr" version="0.0.11" name="PluginsGR" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.resolveurl" version="5.1.28" />
@@ -121,14 +121,15 @@ v1.0.25 (marcelveldt)
 		<summary lang="en">Main resolvers, useful for converting html/js into playable content from various hosts (Greek ones).</summary>
 		<description lang="en">Main resolvers, useful for converting html/js into playable content from various hosts (Greek ones).</description>
 		<platform>all</platform>
-		<news>Version 0.0.9 &amp; 0.0.10 (April 16, 2021)
+		<news>Version 0.0.9 - 0.0.11 (April 16, 2021)
 - Improve userload plugin
+- Add wolfstream.tv (until it gets merged upstream)
 
 Version 0.0.8 (April 14, 2021)
 - Add userload (until it gets merged upstream)
 
 Version 0.0.7 (April 11, 2021)
-- Add highstream tv (until it gets merged upstream)
+- Add highstream.tv (until it gets merged upstream)
 
 Version 0.0.6 (April 05, 2021)
 - Update skai
