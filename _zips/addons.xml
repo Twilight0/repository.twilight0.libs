@@ -111,7 +111,7 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
-<addon id="script.module.resolveurl.pluginsgr" version="0.0.8" name="PluginsGR" provider-name="Twilight0">
+<addon id="script.module.resolveurl.pluginsgr" version="0.0.9" name="PluginsGR" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.resolveurl" version="5.1.28" />
