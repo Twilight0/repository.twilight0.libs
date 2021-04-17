@@ -1,3 +1,13 @@
+[B]2.9.X[/B]
+- Net module taken from ResolveURL and adapted
+  > Deprecate client.request function
+- Add futures for compatibility
+- Utilize futures on youtube module (default maximum workers 5)
+- Remove caching from library itself
+- Update user agent strings
+- Tweaks in compat module
+- Fixes in the bookmarking functions
+
 [B]2.8.X[/B]
 - Replaced xbmc.python import with xbmc.addon for Matrix compatibility
 - New utils module
