@@ -173,7 +173,7 @@ Version 0.0.6 (April 05, 2021)
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="2.9.3" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="2.9.4" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -194,6 +194,7 @@ Version 0.0.6 (April 05, 2021)
 - Update user agent strings
 - Tweaks in compat module
 - Fixes in the bookmarking functions
+- Various other compatibility fixes
 
 [B]2.8.X[/B]
 - Replaced xbmc.python import with xbmc.addon for Matrix compatibility
