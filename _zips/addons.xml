@@ -173,7 +173,7 @@ Version 0.0.6 (April 05, 2021)
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="2.9.1" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="2.9.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -187,9 +187,14 @@ Version 0.0.6 (April 05, 2021)
         <source>https://github.com/Twilight0/script.module.tulip</source>
         <news>[B]2.9.X[/B]
 - Net module taken from ResolveURL and adapted
+  > Deprecate client.request function
+- Add futures for compatibility
+- Utilize futures on youtube module (default maximum workers 5)
 - Deprecate request function
 - Remove caching from library itself
 - Update user agent strings
+- Tweaks in compat module
+- Fixes in the bookmarking functions
 
 [B]2.8.X[/B]
 - Replaced xbmc.python import with xbmc.addon for Matrix compatibility
