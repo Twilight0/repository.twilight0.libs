@@ -173,7 +173,7 @@ Version 0.0.6 (April 05, 2021)
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="2.9.5" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="2.9.6" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
