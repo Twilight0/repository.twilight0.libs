@@ -173,7 +173,7 @@ Version 0.0.6 (April 05, 2021)
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="2.9.9" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="2.9.10" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -194,18 +194,7 @@ Version 0.0.6 (April 05, 2021)
 - Update user agent strings
 - Tweaks in compat module
 - Fixes in the bookmarking functions
-- Various other compatibility fixes
-
-[B]2.8.X[/B]
-- Replaced xbmc.python import with xbmc.addon for Matrix compatibility
-- New utils module
-- Updated user agent strings
-- Updated m3u8 modules
-- Various fixes &amp; tweaks for Kodi 19
-
-[B]2.7.X[/B]
-- New cache functions (taken from ResolveURL and adapted)
-- Various other tweaks</news>
+- Various other compatibility fixes</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
