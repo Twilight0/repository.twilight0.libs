@@ -111,7 +111,7 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
-<addon id="script.module.resolveurl.pluginsgr" version="0.0.17" name="PluginsGR" provider-name="Twilight0">
+<addon id="script.module.resolveurl.pluginsgr" version="0.0.18" name="PluginsGR" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.resolveurl" version="5.1.28" />
@@ -121,7 +121,10 @@ v1.0.25 (marcelveldt)
 		<summary lang="en">Main resolvers, useful for converting html/js into playable content from various hosts (Greek ones).</summary>
 		<description lang="en">Main resolvers, useful for converting html/js into playable content from various hosts (Greek ones).</description>
 		<platform>all</platform>
-		<news>Version 0.0.17 (December 13, 2021)
+		<news>Version 0.0.18 (May 9th, 2022)
+- Fix imports due to major change in resolveurl's code base
+
+Version 0.0.17 (December 13, 2021)
 - Update ert
 - Update mega
 
