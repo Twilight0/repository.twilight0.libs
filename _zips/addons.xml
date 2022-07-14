@@ -18,19 +18,6 @@
         </extension>
 </addon>
 
-<addon id="script.module.futures" name="Futures dummy" version="0.0.0.2" provider-name="Twilight0">
-  <requires>
-    <import addon="xbmc.addon" version="16.1.000"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>Futures dummy</summary>
-    <description>Futures dummy</description>
-    <platform>all</platform>
-    <license>BSD</license>
-  </extension>
-</addon>
-
 <addon id="script.module.jsbeautifier" name="Jsbeautifier" version="1.10.3.1" provider-name="jsbeautifier">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
@@ -44,70 +31,6 @@
         <license>MIT</license>
         <source>https://pypi.org/project/jsbeautifier/</source>
         <website>https://beautifier.io/</website>
-    </extension>
-</addon>
-
-<addon id="script.module.metadatautils" name="Metadata and Artwork module" version="1.0.35.1" provider-name="marcelveldt and others">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.requests" version="2.3.0"/>
-        <import addon="script.module.beautifulsoup4" version="4.0.0" />
-        <import addon="script.module.thetvdb" version="0.0.1" />
-        <import addon="script.module.musicbrainz" version="0.0.1"/>
-        <import addon="script.module.simplecache" version="1.0.0"/>
-        <import addon="script.module.arrow" version="0.6.0"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib"/>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Metadata and artwork from common sources like TMDB, IMDB, TADB and fanart.tv</summary>
-        <summary lang="es_ES">Metadatos e ilustraciones de fuentes comunes como TMDB, IMDB, TADB y fanart.tv</summary>
-        <summary lang="el_GR">Πληροφορίες και εικόνες από κοινές πηγές όπως τα TMDB, IMDB, TADB και fanart.tv</summary>
-        <description lang="en_GB">The metadata and artwork module for Kodi provides rich metadata, including artwork for various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv.[CR][CR]This product uses the TMDb API but is not endorsed or certified by TMDb</description>
-        <description lang="es_ES">El módulo de metadatos e ilustraciones para Kodi proporciona metadatos enriquecidos, que incluyen ilustraciones para varios metatipos al raspar (y almacenar en caché) esta información se extrae de sitios como TMDB, musicbrainz and fanart.tv.[CR][CR]Este producto utiliza la API de TMDb pero no está avalado ni certificado por TMDb</description>
-        <description lang="el_GR">Το σύνολο μονάδων κώδικα για το Kodi παρέχει πλούσια μεταδεδομένα, συμπεριλαμβανομένου και εικόνων από διαφόρους μετατύπους φιλτράρωντας (και αποθηκεύοντας προσωρινά) όλες τις πληροφορίες όπως τα TVDM, musicbrainz και fanart.tv.[CR][CR]Το παρόν σύνολο χρησιμοποιεί το TMDB API, αλλά δεν είναι εγκεκριμένο η πιστοποιημένο από το TMDB</description>
-        <news>v1.0.35 (wuff)
-- Remove BeautifulSoup3 dependency and use BeautifulSoup4 on Kodi 18 and 19 instead
-
-v1.0.34 (wuff)
-- Set BeautifulSoup3 and MusicBrainz dependency as optional to allow install on Matrix
-
-v1.0.33 (wuff)
-- replace xbmc.LOGNOTICE with xbmc.LOGINFO as LOGNOTICE was removed
-
-v1.0.32 (wuff)
-- Remove python requirement for Kodi 18/19 compat
-- Change imdb Top250 parsing from lxml to html.parser
-- replace xbmc.translatePath with xmbcvfs.translatePath
-
-v1.0.31 (berkhornet)
-- Further fixes for PVR artwork
-
-v1.0.30 (berkhornet)
-
-- Kodi 19/Python 3
-- Fixes for PVR artwork
-- Fix display of artwork when manually selecting from TVDB
-- Fixes for animated art and google
-
-v1.0.29 (wuff)
-- Remove python requirement for Kodi 18/19 compat
-
-v1.0.28 (wuff)
-- Kodi 19/Python 3 fixes
-
-v1.0.27 (finkleandeinhorn)
-- update omdb api key
-
-v1.0.26 (finkleandeinhorn, cartmandos)
-- enable caching of omdb/tmdb data
-- remove duplicate "Title" parameter
-
-v1.0.25 (marcelveldt)
-- Last version 30 Mar 2018</news>
-        <license>Apache 2.0</license>
-        <forum>https://forum.kodi.tv/showthread.php?tid=350315</forum>
-        <source>https://github.com/Twilight0/script.module.metadatautils</source>
-        <platform>all</platform>
     </extension>
 </addon>
 
@@ -143,36 +66,34 @@ Version 0.0.14 (June 9, 2021)
 	</extension>
 </addon>
 
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2020.09.07.1" provider-name="Streamlink Devs, Twilight0">
-  <requires>
-      <import addon="xbmc.python" version="2.26.0"/>
-      <import addon="script.module.requests" version="2.12.4"/>
-      <import addon="script.module.futures" version="0.0.0.1"/>
-      <import addon="script.module.pycryptodome" />
-  </requires>
-  <extension point="xbmc.python.module" library="resources/lib/"/>
-  <extension point="xbmc.addon.metadata">
-      <summary>Streamlink Library for Kodi</summary>
-      <description>Streamlink Library for Kodi. It is a collection of plugins to help resolve web page urls into streamable links. Known issue: Does not work on Xbox, specifically throws exception when trying to import something from ctypes module.</description>
-      <platform>all</platform>
-      <license>Simplified BSD</license>
-      <source>https://github.com/Twilight0/script.module.streamlink.base/</source>
-      <language>en</language>
-      <assets>
-          <icon>icon.png</icon>
-      </assets>
-      <news>+2020.09.07.1
-- Update to latest upstream commit
-- Remove on demand installation of futures module
-- Add dummy futures module for Kodi 19
-
-+2020.08.09
-- Update to latest upstream commit
-- Futures module is not set to optional (on Kodi 19 it is not imported)</news>
-  </extension>
+<addon id="script.module.scrapetube" name="Scrapetube" version="2.2.2" provider-name="dermasmid, Twilight0">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.requests" version="2.19.1"/>
+    </requires>
+    <extension point="xbmc.python.module" library="resources/lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Scrapetube</summary>
+        <description lang="en">This module will help you scrape youtube without the official youtube api and without selenium.</description>
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <license>MIT License</license>
+        <source>https://github.com/Twilight0/script.module.scrapetube</source>
+        <news>[B]2.2.2[/B]
+Copied from upstream (version 2.2.2): https://github.com/dermasmid/scrapetube
+Changes made:
+1) Backported to work on Python 2.7
+2) Added list formation module to help get videos in a more simple way for Kodi development
+3) Updated user agent string to Firefox/Windows (version 101)
+</news>
+        <!-- <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets> -->
+    </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="3.0.0" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="3.0.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
