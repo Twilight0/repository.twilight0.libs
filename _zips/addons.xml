@@ -92,7 +92,7 @@ Changes made:
     </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="3.0.2" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="3.0.3" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -111,6 +111,8 @@ Changes made:
 - Add ability to save locally unencrypted m3u8 ts video content
 - Update user agent strings
 - Change the way kodi version is obtained
+- Add limit to net module
+- Convert url bytes object to string (python 3 only)
 
 [B]2.9.X[/B]
 - Net module taken from ResolveURL and adapted

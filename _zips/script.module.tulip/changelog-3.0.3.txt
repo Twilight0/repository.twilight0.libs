@@ -1,13 +1,21 @@
+[B]3.0.X[/B]
+- Utilize certifi for net module
+- Add ability to save locally unencrypted m3u8 ts video content
+- Update user agent strings
+- Change the way kodi version is obtained
+- Add limit to net module
+- Convert url bytes object to string (python 3 only)
+
 [B]2.9.X[/B]
 - Net module taken from ResolveURL and adapted
   > Deprecate client.request function
 - Add futures for compatibility
 - Utilize futures on youtube module (default maximum workers 5)
-- Deprecate request function
 - Remove caching from library itself
 - Update user agent strings
 - Tweaks in compat module
 - Fixes in the bookmarking functions
+- Various other compatibility fixes
 
 [B]2.8.X[/B]
 - Replaced xbmc.python import with xbmc.addon for Matrix compatibility
