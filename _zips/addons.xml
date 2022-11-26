@@ -66,7 +66,7 @@ Version 0.0.14 (June 9, 2021)
 	</extension>
 </addon>
 
-<addon id="script.module.scrapetube" name="Scrapetube" version="2.2.2.1" provider-name="dermasmid, Twilight0">
+<addon id="script.module.scrapetube" name="Scrapetube" version="2.3.1" provider-name="dermasmid, Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.requests" version="2.19.1"/>
@@ -74,11 +74,15 @@ Version 0.0.14 (June 9, 2021)
     <extension point="xbmc.python.module" library="resources/lib" />
     <extension point="xbmc.addon.metadata">
         <summary lang="en">Scrapetube</summary>
-        <description lang="en">This module will help you scrape youtube without the official youtube api and without selenium.</description>
+        <description lang="en">This module will help you scrape YouTube without the official YouTube API and without selenium.</description>
         <platform>all</platform>
         <license>MIT License</license>
         <source>https://github.com/Twilight0/script.module.scrapetube</source>
-        <news>[B]2.2.2.Χ[/B]
+        <news>[B]2.3.1[/B]
+- Some fixes brought from upstream
+- Removed is_py3 as it was not used
+
+[B]2.2.2.Χ[/B]
 Copied from upstream (version 2.2.2): https://github.com/dermasmid/scrapetube
 Changes made:
 1) Backported to work on Python 2.7
