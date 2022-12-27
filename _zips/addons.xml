@@ -66,7 +66,7 @@ Version 0.0.14 (June 9, 2021)
 	</extension>
 </addon>
 
-<addon id="script.module.scrapetube" name="Scrapetube" version="2.3.1" provider-name="dermasmid, Twilight0">
+<addon id="script.module.scrapetube" name="Scrapetube" version="2.3.1.1" provider-name="dermasmid, Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.requests" version="2.19.1"/>
@@ -78,11 +78,11 @@ Version 0.0.14 (June 9, 2021)
         <platform>all</platform>
         <license>MIT License</license>
         <source>https://github.com/Twilight0/script.module.scrapetube</source>
-        <news>[B]2.3.1[/B]
+        <news>[B]2.3.1.X[/B]
 - Some fixes brought from upstream
 - Removed is_py3 as it was not used
 
-[B]2.2.2.Χ[/B]
+[B]2.2.2.X[/B]
 Copied from upstream (version 2.2.2): https://github.com/dermasmid/scrapetube
 Changes made:
 1) Backported to work on Python 2.7
@@ -96,7 +96,7 @@ Changes made:
     </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="3.0.4" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="3.1.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -107,27 +107,19 @@ Changes made:
         <summary lang="en">Tulip library with helper functions for Kodi and its forks</summary>
         <description lang="en">Tulip library combines the best elements from Lambda's "lamlib" and tknorris's shared modules. Also includes various enhancements, newer and improved functions and Python 3 compatibility, though the latter is largely untested. Can also be as standalone utils</description>
         <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/script.module.tulip</source>
-        <news>[B]3.0.X[/B]
+        <news>[B]3.1.X[/B]
+- Update user agent strings
+- Added a few more utilities
+
+[B]3.0.X[/B]
 - Utilize certifi for net module
 - Add ability to save locally unencrypted m3u8 ts video content
 - Update user agent strings
 - Change the way kodi version is obtained
 - Add limit and username/password auth to net module
-- Convert url bytes object to string (python 3 only)
-
-[B]2.9.X[/B]
-- Net module taken from ResolveURL and adapted
-  > Deprecate client.request function
-- Add futures for compatibility
-- Utilize futures on youtube module (default maximum workers 5)
-- Remove caching from library itself
-- Update user agent strings
-- Tweaks in compat module
-- Fixes in the bookmarking functions
-- Various other compatibility fixes</news>
+- Convert url bytes object to string (python 3 only)</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
