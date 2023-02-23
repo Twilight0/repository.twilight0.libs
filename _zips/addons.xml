@@ -1,41 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-    <addon id="repository.twilight0.libs" name="Twilight0 Libs Repository" version="1.4" provider-name="Twilight0">
-        <extension point="xbmc.addon.repository" name="Twilight0 Libs Repository">
-			<dir>
-				<info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml</info>
-				<checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml.md5</checksum>
-				<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/</datadir>
-				<hashes>true</hashes>
-            </dir>
-        </extension>
-        <extension point="xbmc.addon.metadata">
-            <summary>Repository for library addons</summary>
-            <description>Repository for library addons</description>
-            <platform>all</platform>
-            <assets>
-                <icon>icon.png</icon>
-                <fanart>fanart.jpg</fanart>
-            </assets>
-        </extension>
-</addon>
-
-<addon id="script.module.jsbeautifier" name="Jsbeautifier" version="1.10.3.1" provider-name="jsbeautifier">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.six" version="1.6.1" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-        <summary>Written by Einar Lielmanis, maintained and evolved by Liam Newman.</summary>
-        <description>Beautify, unpack or deobfuscate JavaScript. Handles popular online obfuscators.</description>
-        <platform>all</platform>
-        <license>MIT</license>
-        <source>https://pypi.org/project/jsbeautifier/</source>
-        <website>https://beautifier.io/</website>
-    </extension>
-</addon>
-
 <addon id="script.module.resolveurl.pluginsgr" version="0.0.18" name="PluginsGR" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
@@ -68,6 +32,26 @@ Version 0.0.14 (June 9, 2021)
 	</extension>
 </addon>
 
+    <addon id="repository.twilight0.libs" name="Twilight0 Libs Repository" version="1.3" provider-name="Twilight0">
+        <extension point="xbmc.addon.repository" name="Twilight0 Libs Repository">
+			<dir>
+				<info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml</info>
+				<checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml.md5</checksum>
+				<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/</datadir>
+				<hashes>false</hashes>
+            </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Repository for library addons</summary>
+            <description>Repository for library addons</description>
+            <platform>all</platform>
+            <assets>
+                <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
+            </assets>
+        </extension>
+</addon>
+
 <addon id="script.module.scrapetube" name="Scrapetube" version="2.3.1.1" provider-name="dermasmid, Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
@@ -98,7 +82,23 @@ Changes made:
     </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="3.1.0" provider-name="Twilight0">
+<addon id="script.module.jsbeautifier" name="Jsbeautifier" version="1.10.3.1" provider-name="jsbeautifier">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.six" version="1.6.1" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Written by Einar Lielmanis, maintained and evolved by Liam Newman.</summary>
+        <description>Beautify, unpack or deobfuscate JavaScript. Handles popular online obfuscators.</description>
+        <platform>all</platform>
+        <license>MIT</license>
+        <source>https://pypi.org/project/jsbeautifier/</source>
+        <website>https://beautifier.io/</website>
+    </extension>
+</addon>
+
+<addon id="script.module.tulip" name="Tulip Library" version="3.1.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -114,6 +114,8 @@ Changes made:
         <news>[B]3.1.X[/B]
 - Update user agent strings
 - Added a few more utilities
+- Add offscreen boolean parameter for ListItem
+- Bug fixes
 
 [B]3.0.X[/B]
 - Utilize certifi for net module
