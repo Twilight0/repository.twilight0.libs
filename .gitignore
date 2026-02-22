@@ -25,3 +25,9 @@ _tools/
 /script\.module\.scrapetube/
 
 /script\.module\.resolveurl\.pluginsgr/
+
+addons_dir/
+
+archives/
+
+create_repository.py
