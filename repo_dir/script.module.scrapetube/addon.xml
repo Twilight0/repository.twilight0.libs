@@ -28,9 +28,8 @@ Changes made:
 2) Added list formation module to help get videos in a more simple way for Kodi development
 3) Updated user agent string to Firefox/Windows (version 101)
 </news>
-        <!-- <assets>
+        <assets>
             <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets> -->
+        </assets>
     </extension>
 </addon>
