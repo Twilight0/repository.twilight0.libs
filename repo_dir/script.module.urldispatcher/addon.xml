@@ -6,7 +6,7 @@
     <extension point="xbmc.python.module" library="resources/lib" />
     <extension point="xbmc.addon.metadata">
         <summary lang="en">URL dispatcher</summary>
-        <description lang="en">URL dispatcher</description>
+        <description lang="en">URL dispatcher, useful for url routing</description>
         <platform>all</platform>
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/script.module.urldispatcher</source>
