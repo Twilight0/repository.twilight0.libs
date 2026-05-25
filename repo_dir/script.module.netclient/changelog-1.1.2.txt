@@ -1,0 +1,11 @@
+[B]1.1.2[/B]
+- Add spoofer function to help append headers to result urls
+
+[B]1.1.1[/B]
+- Graceful Cloudflare challenge failure
+
+[B]1.1.0[/B]
+- Add http_PATCH method
+
+[B]1.0.0[/B]
+- Initial version
