@@ -30,4 +30,4 @@ addons_dir/
 
 archives/
 
-create_repository.py
+repository_creator.py
