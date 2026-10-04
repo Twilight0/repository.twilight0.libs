@@ -1,0 +1,23 @@
+[B]2.8.0[/B]
+- Sync core with merged upstream (peoyli + ahai72160 fixes for YouTube layout changes)
+- Wrapper hardened for new lockupViewModel/shorts shapes (tolerant title/thumbnail/duration)
+- Fixed get_channel positional-arg and list_playlists get_videos arity bugs
+- duration_converter handles H:MM:SS, live and missing durations
+- Optional login cookies on all core calls and wrapper list_* helpers, for own/private videos
+- Authenticated youtubei continuations via SAPISIDHASH headers
+- Parse logged-in page layout (yt-initial-data script tag)
+
+[B]2.5.1[/B]
+- Bump to 2.5.1 version including all commits adapted for older Kodi versions
+
+[B]2.3.1[/B]
+- Some fixes brought from upstream
+- Removed is_py3 as it was not used
+- Rename list_formation module to wrapper
+
+[B]2.2.2.Χ[/B]
+Copied from upstream (version 2.2.2): https://github.com/dermasmid/scrapetube
+Changes made:
+1) Backported to work on Python 2.7
+2) Added list formation module to help get videos in a more simple way for Kodi development
+3) Updated user agent string to Firefox/Windows (version 101)
