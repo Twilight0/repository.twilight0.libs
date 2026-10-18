@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.filmnet.metadata" version="3.0.0" name="Filmnet Metadata" provider-name="Filmnet Devs Team">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Offline artwork metadata for the Filmnet add-on</summary>
+		<description lang="en_GB">Ships a pre-built SQLite lookup table that maps IMDb and Trakt IDs to TMDB poster and fanart paths, so the Filmnet video add-on can resolve artwork without calling the TMDB API. It is maintained separately from the add-on itself so the add-on can be distributed faster.</description>
+		<platform>all</platform>
+		<license>GPL-3.0-or-later</license>
+		<source>https://bitbucket.org/thgiliwt/filmnet</source>
+		<news>v3.0.0
+- Modernised addon.xml for Kodi 19+ (xbmc.python 3.0.0, assets manifest, license and localised summary/description)
+- Rebuilt meta.db: added an imdb index, a tmdb column and deduplicated IMDb IDs
+- Normalised file permissions and line endings</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>

@@ -1,0 +1,18 @@
+3.0.0
+- Modernised addon.xml for Kodi 19+ (xbmc.python 3.0.0, assets manifest, license, localised summary/description, source)
+- Rebuilt resources/data/meta.db:
+  - added idx_mv_imdb index (artwork lookups no longer do a full table scan)
+  - added a tmdb column holding the matched TMDB id
+  - deduplicated duplicate IMDb IDs and merged their artwork
+  - normalised empty artwork values to '0'
+  - refreshed poster/fanart from TMDB for every title (164750 matched, 1917 without a match)
+  - checked the stored artwork against the image CDN and blanked the tokens that no longer resolve (14120 posters, 12175 fanarts), then vacuumed the file (~18 MB)
+- Added lib/build_meta_db.py, a maintenance script that refreshes meta.db from TMDB
+  (--verify re-checks the stored artwork and blanks dead tokens)
+- Normalised file permissions (644/755) and line endings
+
+2.0.0
+- Updated meta.db (2018 TMDB artwork snapshot)
+
+1.0.0
+- Initial version
